@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4crg2mcukyct"]
+
+[ext_resource type="PackedScene" uid="uid://dqqa486b3wugk" path="res://GymProject.tscn" id="1_xqvy2"]
+[ext_resource type="PackedScene" uid="uid://cakm67syf104b" path="res://tile_map.tscn" id="2_jjxul"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -3)
+
+[node name="BetaChar" parent="." instance=ExtResource("1_xqvy2")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_jjxul")]

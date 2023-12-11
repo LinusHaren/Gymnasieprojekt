@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://2uqsn438obrr"]
+
+[ext_resource type="Script" path="res://MainLevelBase.cs" id="1_5ommh"]
+[ext_resource type="Script" path="res://BetaChar.cs" id="1_b2pvh"]
+[ext_resource type="Script" path="res://GymProject.cs" id="3_7cchv"]
+[ext_resource type="Script" path="res://LevelGround.cs" id="3_erxi5"]
+[ext_resource type="PackedScene" uid="uid://dqqa486b3wugk" path="res://GymProject.tscn" id="5_w6fqy"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_5ommh")
+
+[node name="BetaChar" type="CharacterBody2D" parent="."]
+script = ExtResource("1_b2pvh")
+
+[node name="CharacterSpawnPosition" type="Marker2D" parent="BetaChar"]
+position = Vector2(134, 106)
+scale = Vector2(-4354.34, 1607.62)
+script = ExtResource("3_7cchv")
+
+[node name="LevelGround" type="Marker2D" parent="BetaChar"]
+position = Vector2(514, 434)
+script = ExtResource("3_erxi5")
+
+[node name="BetaChar2" parent="." instance=ExtResource("5_w6fqy")]
+position = Vector2(532, 173)

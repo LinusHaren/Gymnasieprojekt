@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl8lgcllvwt7c"]
+
+[ext_resource type="Texture2D" uid="uid://bi3the6mmybfh" path="res://grass.png" id="1_orofm"]
+[ext_resource type="PackedScene" uid="uid://dqqa486b3wugk" path="res://GymProject.tscn" id="2_jatof"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6d13"]
+size = Vector2(1392, 244)
+
+[node name="Grassland" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 527.5)
+scale = Vector2(1.43402, 0.917603)
+texture = ExtResource("1_orofm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(576, 530)
+shape = SubResource("RectangleShape2D_f6d13")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="BetaChar" parent="." instance=ExtResource("2_jatof")]

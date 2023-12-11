@@ -1,0 +1,15 @@
+res://GymProject.tscn
+res://tile_map.tscn
+res://character_body_2d.tscn
+res://coin.tscn
+res://Area2D.cs
+res://BetaChar.cs
+res://character_body_2d.cs
+res://Enemy.cs
+res://grassland.cs
+res://GymProject.cs
+res://HP.cs
+res://Main.cs
+res://MainLevelBase.cs
+res://platform.cs
+res://UI.cs

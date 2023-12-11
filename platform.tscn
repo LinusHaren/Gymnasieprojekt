@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3volx74b182g"]
+
+[ext_resource type="Texture2D" uid="uid://bi3the6mmybfh" path="res://grass.png" id="1_umlip"]
+[ext_resource type="Script" path="res://platform.cs" id="1_vlhk6"]
+[ext_resource type="PackedScene" uid="uid://dqqa486b3wugk" path="res://GymProject.tscn" id="3_u4c4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gngkk"]
+size = Vector2(971.687, 265.672)
+
+[node name="Platform" type="Node2D"]
+script = ExtResource("1_vlhk6")
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(572, 493.25)
+scale = Vector2(1.18557, 1.12921)
+texture = ExtResource("1_umlip")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass/StaticBody2D"]
+position = Vector2(1.68695, 1.5498)
+shape = SubResource("RectangleShape2D_gngkk")
+
+[node name="BetaChar" parent="." instance=ExtResource("3_u4c4x")]

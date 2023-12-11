@@ -1,0 +1,35 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1702299497
+Area2D.cs::CSharpScript::-1::1698056694::0::1::::<><>::
+BetaChar.cs::CSharpScript::-1::1696496772::0::1::::<><>::
+betaEnemy.png::CompressedTexture2D::8261493728778082175::1697705691::1700044185::1::::<><>::
+character_body_2d.cs::CSharpScript::-1::1701957415::0::1::::<><>::
+character_body_2d.tscn::PackedScene::5845155128190798878::1702225844::0::1::::<><>::res://character_body_2d.cs<>uid://dpx6uhp3rqd2n::::res://betaEnemy.png
+coin.png::CompressedTexture2D::2235544649223702264::1701092182::1701092207::1::::<><>::
+coin.tscn::PackedScene::4384886501034006963::1702225844::0::1::::<><>::uid://636dgm76lc6k::::res://coin.png
+CoinCounter.cs::CSharpScript::-1::1701093446::0::1::::<><>::
+Enemy.cs::CSharpScript::-1::1698393480::0::1::::<><>::
+Enemy.tscn::PackedScene::6630023910193188001::1699122277::0::1::::<><>::uid://bcpqf2wyttavi
+enemy_test.tscn::PackedScene::6131342511221806806::1698393348::0::1::::<><>::res://enemy_test.cs<>uid://bcpqf2wyttavi
+grass.png::CompressedTexture2D::7319500353967309676::1696434075::1700044185::1::::<><>::
+grassland.cs::CSharpScript::-1::1696496482::0::1::::<><>::
+grassland.tscn::PackedScene::5613721837540680750::1698422346::0::1::::<><>::uid://bi3the6mmybfh
+GymProject.cs::CSharpScript::-1::1702229969::0::1::::<><>::
+GymProject.tscn::PackedScene::8315367162619252214::1702225844::0::1::::<><>::res://GymProject.cs<>uid://cb6eoiuv2nlyh::::res://Namnlös.png<>uid://d1x4fju1654pm::::res://pirate.png<>res://UI.cs<>res://HP.cs<>res://CoinCounter.cs
+HP.cs::CSharpScript::-1::1699437871::0::1::::<><>::
+icon.svg::CompressedTexture2D::7738604186805820947::1695806537::1695806550::1::::<><>::
+LevelBase.tscn::PackedScene::1937390678402344343::1696604996::0::1::::<><>::res://MainLevelBase.cs<>res://BetaChar.cs<>res://GymProject.cs<>res://LevelGround.cs<>uid://dqqa486b3wugk
+Main.cs::CSharpScript::-1::1701941008::0::1::::<><>::
+MainLevelBase.cs::CSharpScript::-1::1696496681::0::1::::<><>::
+Namnlös.png::CompressedTexture2D::4907294242559460891::1696245137::1696245137::1::::<><>::
+nature-paltformer-tileset-16x16 (1).png::CompressedTexture2D::6083584437684593676::1699031776::1699031816::1::::<><>::
+node_2d.tscn::PackedScene::9199911612516946439::1696850592::0::1::::<><>::uid://dqqa486b3wugk
+pirate - kopia.png::CompressedTexture2D::6452229649736489309::1700846340::1700848816::1::::<><>::
+pirate.png::CompressedTexture2D::9033422900601472158::1700071999::1700072165::1::::<><>::
+platform.cs::CSharpScript::-1::1696848736::0::1::::<><>::
+platform.tscn::PackedScene::4395931178815766688::1698422347::0::1::::<><>::uid://bi3the6mmybfh
+tile_map.tscn::PackedScene::4794270818102916959::1702229980::0::1::::<><>::uid://dcjvdpi5r3vse::::res://grass.png<>uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>res://Main.cs<>uid://cpjo36ywpslm1::::res://character_body_2d.tscn<>res://pixil-frame-0 (2).png
+UI.cs::CSharpScript::-1::1699441169::0::1::::<><>::
+UI.tscn::PackedScene::3465936874795368052::1699441418::0::1::::<><>::res://UI.cs<>res://HP.cs
+::res://Gymnasieprojekt/::1698420459
+::res://imgs/::1700044180
