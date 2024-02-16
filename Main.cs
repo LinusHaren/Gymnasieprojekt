@@ -7,35 +7,38 @@ using System.Threading;
 
 public partial class Main : Node
 {
-    public override void _Ready()
-    {
+    [Signal]
+	public delegate void LoseHPEventHandler(int currentHP);
+    public int currentHP = 3;
+
+    public override void _Ready() //Old code that only works in playing the "Level1" scene
+    {                             //Remade i MainScene.cs
         PlayerRespawn();
         EnemyRespawn();
     }
 
 
-
     public void PlayerRespawn()
     {
+        /*
         var player = GetNode<GymProject>("BetaChar");
-
+        
         var respawn = GetNode<Marker2D>("PlayerSpawn");
         
         player.Position = respawn.Position;
-
         
+        */
+        //Old code thats only used in the original main scene in level 1
     }
 
 
     public void PlayerHit(int currentHP)
 	{
-		if (currentHP == 0)
+        
+		if (currentHP <= 0)
 		{
-            /*
+            
 			currentHP = 3;
-			var tree = GetTree();
-			tree.ReloadCurrentScene();
-            */
 		}
 	}
 
@@ -48,21 +51,10 @@ public partial class Main : Node
 
         enemy.Position = EnemySpawnPosition.Position;
     }
-
+/*
     public void OnBetaCharPlayerOutOfBounds()
     {
         PlayerRespawn();
     }
-    /*
-     public void PlayerHit(int currentHP)
-	{
-        if (currentHP <= 0)
-        {
-            GD.Print("Respawn");
-			//In i deathscreen, längst ner till process, byt inherit till when paused
-			var tree = GetTree();
-			tree.ReloadCurrentScene();
-        }
-    }
-    */
+*/
 }

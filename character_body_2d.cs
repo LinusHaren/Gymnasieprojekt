@@ -3,10 +3,19 @@ using System;
 
 public partial class character_body_2d : CharacterBody2D
 {	
+	AnimatedSprite2D animationHandler;
+
+
+	
+	public override void _Ready()
+	{
+		animationHandler = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+
+	}
 	
 	public void DmgPlayer(GymProject BetaChar)
 	{
-		
+		/*
 		GD.Print("Player_Got_Hit(Enemy Script)");
 
 		//var PlayerCube = GetNode<GymProject>("BetaChar");
@@ -17,14 +26,17 @@ public partial class character_body_2d : CharacterBody2D
 
 		velocity.X = -PlayerHitPushBack;
 		velocity.Y = -PlayerHitPushBack;
-		
+		*/
 	}
 	
 	
 	public void Hit(GymProject Character2D)
 	{
+		/*
 		GD.Print("Enemy Died");
+		
 		QueueFree();
+		*/
 	}
 	
 	private void EnemyDespawn()
@@ -33,13 +45,13 @@ public partial class character_body_2d : CharacterBody2D
 		//Avoids overloading
 
 		//QueueFree();
-		
-		//...abusable, player can easily run back and forward again when the enemy spawns to despawn it imidietly...
-		//(kommentarer till mig själv) tar bort QueueFree för tillfället
 	}
 	private RayCast2D WallCheck;
 	private RayCast2D WallCheckRight;
-	private RayCast2D PlayerCheckAbove;
+
+	private RayCast2D FloorCheckRight;
+	private RayCast2D FloorCheckLeft;
+
 
 		
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -65,7 +77,9 @@ public partial class character_body_2d : CharacterBody2D
 		
 		WallCheck = GetNode<RayCast2D>("WallCheck");
 		WallCheckRight = GetNode<RayCast2D>("WallCheckRight");
-		PlayerCheckAbove = GetNode<RayCast2D>("PlayerCheck");
+
+		FloorCheckLeft = GetNode<RayCast2D>("FloorCheckLeft");
+		FloorCheckRight = GetNode<RayCast2D>("FloorCheckRight");
 		
 		if (WallCheck.IsColliding())
 		//Touched a left wall
@@ -78,9 +92,15 @@ public partial class character_body_2d : CharacterBody2D
 			MovingLeft = true;
 		}
 		
-		if (PlayerCheckAbove.IsColliding())
+
+		if (!FloorCheckLeft.IsColliding())
 		{
-			QueueFree();
+			MovingLeft = false;
+		}
+
+		if (!FloorCheckRight.IsColliding())
+		{
+			MovingLeft = true;
 		}
 
 
@@ -88,11 +108,13 @@ public partial class character_body_2d : CharacterBody2D
 		{
 			velocity.X = AiMoveSpeed;
 			//Moving left
+			animationHandler.Play("MovingRight");
 		}
 		else if (MovingLeft == false)
 		{
 			velocity.X = -AiMoveSpeed;
 			//Moving Right
+			animationHandler.Play("MovingLeft");
 		}
 
 

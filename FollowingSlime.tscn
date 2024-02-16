@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbhq5gbypgpry"]
+
+[ext_resource type="Script" path="res://FollowingSlime.cs" id="1_0euhj"]
+[ext_resource type="Texture2D" uid="uid://cev5plm0o0kce" path="res://imgs/EnemySprites/YellowSlimeTileSet.png" id="2_05cml"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wskpb"]
+atlas = ExtResource("2_05cml")
+region = Rect2(0, 0, 192, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfh6h"]
+atlas = ExtResource("2_05cml")
+region = Rect2(192, 0, 192, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crbrr"]
+atlas = ExtResource("2_05cml")
+region = Rect2(0, 252, 192, 132)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlulc"]
+atlas = ExtResource("2_05cml")
+region = Rect2(192, 252, 192, 132)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h74pc"]
+animations = [{
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_wskpb")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_xfh6h")
+}],
+"loop": true,
+"name": &"MovingLeft",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_crbrr")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_dlulc")
+}],
+"loop": true,
+"name": &"MovingRight",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jka2"]
+size = Vector2(171.25, 133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7hvf"]
+size = Vector2(181.5, 138.5)
+
+[node name="FollowingSlime" type="CharacterBody2D"]
+script = ExtResource("1_0euhj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(200, 167)
+sprite_frames = SubResource("SpriteFrames_h74pc")
+animation = &"MovingLeft"
+frame_progress = 0.718291
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(207.375, 168)
+shape = SubResource("RectangleShape2D_0jka2")
+
+[node name="WallCheck" type="RayCast2D" parent="."]
+position = Vector2(140, 187)
+target_position = Vector2(-38, -1)
+
+[node name="WallCheckRight" type="RayCast2D" parent="."]
+position = Vector2(254, 186)
+target_position = Vector2(48, 0)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(193, 159)
+scale = Vector2(0.6, 0.999999)
+
+[node name="DmgPlayer" type="Area2D" parent="."]
+position = Vector2(87, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DmgPlayer"]
+position = Vector2(124.25, 126.75)
+shape = SubResource("RectangleShape2D_o7hvf")
+debug_color = Color(0.980392, 0.133333, 0, 0)
+
+[node name="FloorCheckRight" type="RayCast2D" parent="."]
+position = Vector2(285, 145)
+target_position = Vector2(0, 97)
+
+[node name="FloorCheckLeft" type="RayCast2D" parent="."]
+position = Vector2(103, 144)
+target_position = Vector2(0, 98)

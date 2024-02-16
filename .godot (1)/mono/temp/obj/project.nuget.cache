@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "OAhKbyrIz+waIbALfm0sXgE2N4m+wjBO+7d2aHIDtz+QqS1HYCt947sEhUWDY3c3rH3e2PqrfDSDY+26p9jJSQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\11LH0422\\OneDrive - Åmåls kommun\\Dokument\\GoDot\\Gymnasieprojekt\\Gymnasieprojekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\11LH0422\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
+    "C:\\Users\\11LH0422\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
+    "C:\\Users\\11LH0422\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

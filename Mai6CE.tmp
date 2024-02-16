@@ -1,0 +1,126 @@
+[gd_scene load_steps=14 format=3 uid="uid://da4r34nkyhkta"]
+
+[ext_resource type="Script" path="res://MainScene.cs" id="1_4hd5v"]
+[ext_resource type="PackedScene" uid="uid://bu4xtks0hirnv" path="res://Level1.tscn" id="2_hyg4n"]
+[ext_resource type="Texture2D" uid="uid://bgue8ecx4j8s4" path="res://imgs/Background/CloudsBackground.png" id="2_ov6fy"]
+[ext_resource type="PackedScene" uid="uid://dqqa486b3wugk" path="res://GymProject.tscn" id="4_doasx"]
+[ext_resource type="PackedScene" uid="uid://d4hl75vrlfqah" path="res://Level2.tscn" id="4_l881a"]
+[ext_resource type="PackedScene" uid="uid://c3b1mjh721pwe" path="res://Spike.tscn" id="5_7ymrp"]
+[ext_resource type="PackedScene" uid="uid://dlpgpdtvv25dc" path="res://SpikesX5.tscn" id="6_famls"]
+[ext_resource type="PackedScene" uid="uid://c4prcuky82p7k" path="res://MagmaBlock.tscn" id="7_36gen"]
+[ext_resource type="PackedScene" uid="uid://bbhq5gbypgpry" path="res://FollowingSlime.tscn" id="9_04ums"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdk8b"]
+size = Vector2(430, 348.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kacbw"]
+size = Vector2(151.875, 137.141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3grfu"]
+size = Vector2(151.875, 137.141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ex4e"]
+size = Vector2(160, 144)
+
+[node name="MainScene" type="Node"]
+script = ExtResource("1_4hd5v")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.256
+anchor_top = 0.84
+anchor_right = 1.256
+anchor_bottom = 1.84
+offset_left = 1597.09
+offset_top = -2908.32
+offset_right = 1827.09
+offset_bottom = -2608.32
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(532, 349)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ov6fy")
+
+[node name="TileMap" parent="." instance=ExtResource("2_hyg4n")]
+position = Vector2(896, 187)
+
+[node name="Spike" parent="TileMap" instance=ExtResource("5_7ymrp")]
+position = Vector2(-1791, 36)
+
+[node name="SpikeX5" parent="TileMap" instance=ExtResource("6_famls")]
+position = Vector2(-1627, 49)
+
+[node name="SpikeX5 Upside Down" parent="TileMap" instance=ExtResource("6_famls")]
+position = Vector2(-1299, -159)
+rotation = 3.14159
+
+[node name="BetaChar" parent="." instance=ExtResource("4_doasx")]
+position = Vector2(-132, -1795)
+
+[node name="Camera2D" type="Camera2D" parent="BetaChar"]
+position = Vector2(-34, -13)
+zoom = Vector2(0.9, 0.9)
+drag_horizontal_offset = 0.2
+
+[node name="Level1DeSpawner" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1DeSpawner"]
+position = Vector2(2655, 346)
+shape = SubResource("RectangleShape2D_kdk8b")
+debug_color = Color(0, 0.639216, 0.34902, 0.419608)
+
+[node name="Level1SpawnPosition" type="Marker2D" parent="."]
+position = Vector2(106, -723)
+
+[node name="Level2SpawnPosition" type="Marker2D" parent="."]
+position = Vector2(-158, 149)
+
+[node name="Level2" parent="." instance=ExtResource("4_l881a")]
+visible = false
+position = Vector2(-271, 214)
+
+[node name="EndGoal1000points" type="Area2D" parent="."]
+position = Vector2(875, 173)
+
+[node name="End1 (1000 points)" type="CollisionShape2D" parent="EndGoal1000points"]
+position = Vector2(357, -521)
+shape = SubResource("RectangleShape2D_kacbw")
+debug_color = Color(0.580392, 0.552941, 0, 0.419608)
+
+[node name="EndGoal800points" type="Area2D" parent="."]
+
+[node name="End2 (800 ponits)" type="CollisionShape2D" parent="EndGoal800points"]
+position = Vector2(1555, -346)
+shape = SubResource("RectangleShape2D_3grfu")
+debug_color = Color(0.862745, 0.968627, 0.980392, 0.419608)
+
+[node name="EndGoal500points" type="Area2D" parent="."]
+
+[node name="End3 (500 points)" type="CollisionShape2D" parent="EndGoal500points"]
+position = Vector2(1865, -352)
+shape = SubResource("RectangleShape2D_0ex4e")
+debug_color = Color(0.768627, 0.407843, 0.12549, 0.419608)
+
+[node name="MagmaBlock" parent="." instance=ExtResource("7_36gen")]
+position = Vector2(-1066, 366)
+
+[node name="FollowingSlime" parent="." instance=ExtResource("9_04ums")]
+position = Vector2(-2331, -1523)
+
+[connection signal="body_entered" from="TileMap/Spike/Area2D" to="BetaChar" method="OnPlayerOnSpike"]
+[connection signal="body_entered" from="TileMap/SpikeX5/Area2D" to="BetaChar" method="OnPlayerOnSpike"]
+[connection signal="body_entered" from="TileMap/SpikeX5 Upside Down/Area2D" to="BetaChar" method="OnPlayerOnSpike"]
+[connection signal="PlayerOutOfBounds" from="BetaChar" to="." method="OnPlayerOutOfBound"]
+[connection signal="body_entered" from="Level1DeSpawner" to="." method="OnLevel1DeSpawnerBodyEntered"]
+[connection signal="body_entered" from="EndGoal1000points" to="BetaChar" method="EndOfLevel"]
+[connection signal="body_entered" from="EndGoal800points" to="BetaChar" method="EndOfLevel800"]
+[connection signal="body_entered" from="EndGoal500points" to="BetaChar" method="EndOfLevel500"]
+[connection signal="body_entered" from="MagmaBlock/Area2D" to="BetaChar" method="OnPlayerOnMagma"]
+[connection signal="body_entered" from="FollowingSlime/Area2D" to="BetaChar" method="DmgPlayerFollowSlime"]
+
+[editable path="TileMap/Spike"]
+[editable path="TileMap/SpikeX5"]
+[editable path="TileMap/SpikeX5 Upside Down"]
+[editable path="MagmaBlock"]
+[editable path="FollowingSlime"]

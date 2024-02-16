@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgqc4kskudur2"]
+
+[ext_resource type="Texture2D" uid="uid://ck85j7kgltmrg" path="res://movingPlatform.png" id="1_8vspw"]
+[ext_resource type="Script" path="res://CircleRotationPlatform.cs" id="1_j3rq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytixt"]
+size = Vector2(47, 47.5)
+
+[sub_resource type="Animation" id="Animation_u6mgw"]
+length = 11.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 7.5, 8, 9, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(283.5, 47), Vector2(288.5, 123), Vector2(337.5, 219), Vector2(445.5, 284), Vector2(585.5, 274), Vector2(677.5, 202), Vector2(723.5, 105), Vector2(708.5, -15), Vector2(648.5, -97), Vector2(569.5, -147), Vector2(404.5, -134), Vector2(333.5, -79), Vector2(280.5, 65)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 7.5, 8, 9, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(284, 47), Vector2(289, 123), Vector2(338, 219), Vector2(446, 284), Vector2(586, 274), Vector2(678, 202), Vector2(724, 105), Vector2(709, -15), Vector2(649, -97), Vector2(570, -147), Vector2(405, -134), Vector2(334, -79), Vector2(281, 65)]
+}
+
+[sub_resource type="Animation" id="Animation_khcgx"]
+resource_name = "circleRotation"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 4.5, 5, 6, 6.5, 7, 7.5, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(137.5, 70), Vector2(153.5, 153), Vector2(215.5, 238), Vector2(335.5, 288), Vector2(486.5, 250), Vector2(549.5, 183), Vector2(584.5, 86), Vector2(509.5, -91), Vector2(436.5, -137), Vector2(343.5, -157), Vector2(214.5, -98), Vector2(149.5, -11), Vector2(134.5, 76)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 4.5, 5, 6, 6.5, 7, 7.5, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(138, 70), Vector2(154, 153), Vector2(216, 238), Vector2(337, 288), Vector2(488, 250), Vector2(551, 183), Vector2(586, 86), Vector2(511, -91), Vector2(437, -137.5), Vector2(343, -158), Vector2(215, -98.5), Vector2(151, -11), Vector2(136, 76)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cbwdo"]
+_data = {
+"RESET": SubResource("Animation_u6mgw"),
+"circleRotation": SubResource("Animation_khcgx")
+}
+
+[node name="CircleRotationPlatform" type="AnimatableBody2D"]
+position = Vector2(4, 2)
+script = ExtResource("1_j3rq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(283.5, 47)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_8vspw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(284, 47)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_ytixt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
+libraries = {
+"": SubResource("AnimationLibrary_cbwdo")
+}

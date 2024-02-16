@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhwbvcp2bxqv"]
+
+[ext_resource type="Script" path="res://character_body_2d.cs" id="1_6v78h"]
+[ext_resource type="Texture2D" uid="uid://dpx6uhp3rqd2n" path="res://betaEnemy.png" id="1_8ont2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tapaq"]
+size = Vector2(174.5, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yj0hp"]
+size = Vector2(170.75, 94.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po88f"]
+size = Vector2(177, 103)
+
+[node name="BetaEnemy" type="CharacterBody2D" groups=["Hit"]]
+position = Vector2(264, 54)
+script = ExtResource("1_6v78h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(181.5, 76.5)
+scale = Vector2(0.291181, 0.294461)
+texture = ExtResource("1_8ont2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(181.75, 76.5)
+shape = SubResource("RectangleShape2D_tapaq")
+
+[node name="WallCheck" type="RayCast2D" parent="."]
+position = Vector2(128, 79)
+target_position = Vector2(-38, -1)
+
+[node name="WallCheckRight" type="RayCast2D" parent="."]
+position = Vector2(226, 78)
+target_position = Vector2(48, 0)
+
+[node name="PlayerCheck" type="RayCast2D" parent="."]
+position = Vector2(181, 102)
+target_position = Vector2(-1, -80)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(181, 51)
+scale = Vector2(0.6, 0.999999)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(162, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(19.375, 74.875)
+shape = SubResource("RectangleShape2D_yj0hp")
+
+[node name="DmgPlayer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DmgPlayer"]
+position = Vector2(181.5, 76.5)
+shape = SubResource("RectangleShape2D_po88f")
+
+[node name="FloorCheckRight" type="RayCast2D" parent="."]
+position = Vector2(273, 37)
+target_position = Vector2(0, 97)
+
+[node name="FloorCheckLeft" type="RayCast2D" parent="."]
+position = Vector2(91, 36)
+target_position = Vector2(0, 98)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="EnemyDespawn" flags=18]
+[connection signal="body_entered" from="Area2D" to="." method="Hit" flags=18]
+[connection signal="body_entered" from="DmgPlayer" to="." method="DmgPlayer" flags=18]
