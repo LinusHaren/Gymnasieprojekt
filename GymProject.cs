@@ -19,7 +19,10 @@ public partial class GymProject : CharacterBody2D
 	AudioStreamPlayer2D SwordSwingSE;
 	//SE = Sound Effect
 
+	RichTextLabel FinalScore;
+
 	Timer IFramesTimer;
+	Timer attackCD;
 	
 
 	enum state
@@ -76,12 +79,16 @@ public partial class GymProject : CharacterBody2D
 	const int wallPushBack = 1300;
 	//Walljump 
 
-	const float dash = 1300;
-	//Dash length
+	public bool isWallJumpAbable = true;
 
 	
 	public bool dmgTaken = true;
-	//For the players knockback when in range of an enemy, disables all movement
+
+
+
+	public bool attackCooldownState = false;
+	//Main function is to stop the player from holding down
+	//or just straight up mashing (repeatedly press) the attack button through levels.
 
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
@@ -115,7 +122,8 @@ public partial class GymProject : CharacterBody2D
 
 
 			float Yknockback = 140f;
-			//Change Xknockback depending on opinions, currently an Xknockback would only work in one direction
+			// Currently at 0, concidering it needs a check for what direction a player is aproaching an
+			// obstacle.
 			float Xknockback = 0f;
 
 			//Updates the player's position (moves it a bit above the current position)
@@ -158,16 +166,31 @@ public partial class GymProject : CharacterBody2D
 			Position = new Vector2(playerPosition.X, playerPosition.Y - Yknockback);
 		}
 	}
-	
-	public void DmgPlayerFollowSlime(FollowingSlime CharacterBody2D)
+
+	public void OnInvisbleWallTouched(GymProject Area2D)
 	{
-		GD.Print("FollowSlime_Died");
+		GD.Print("Level Boundry Reached");
+		Vector2 playerPosition = Position;
+		
+		var spawnPosition = GetNode<Marker2D>("../Level2SpawnPosition");
+		Position = spawnPosition.Position;
+	}
+
+	public void OnCancelWallJumpEntered(GymProject Area2D)
+	{
+		isWallJumpAbable = false;
+		GD.Print("Player cant walljump");
+	}
+	public void OnCancelWallJumpExcited(GymProject Area2D)
+	{
+		isWallJumpAbable = true;
+		GD.Print("Player can walljump");
 	}
 	
 	public override void _Ready()
 	{
 		animationHandler = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-		//Tidigare var det: 	  <AnimatedSprite2D>("Sprite2D")
+		//Tidigare var det: 	  <AnimatedSprite2D>("Sprite2D");
 		spriteFlip = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 		//Ta bort AnimationPlayer, helt onödig
@@ -179,15 +202,21 @@ public partial class GymProject : CharacterBody2D
 		PlayerTakingDmgSE = GetNode<AudioStreamPlayer2D>("PlayerTakingDmgSE");
 		SwordSwingSE = GetNode<AudioStreamPlayer2D>("SwordSwingSE");
 
+		FinalScore = GetNode<RichTextLabel>("UI/FinalScoreScreen");
+
 		IFramesTimer = GetNode<Timer>("IFramesTimer");
+		attackCD = GetNode<Timer>("AttackCDTimer");
 	}
 
 
-
-	public void OnPlayerOnSpike(CharacterBody2D Area2D)
+		
+	public void OnPlayerOnSpike(GymProject CharacterBody2D)
+	//(CharacterBody2D BetaChar)
+	//(CharacterBody2D Area2D)
 	{
-		if (StartIFramesTimer == false)
-		{			
+		//if (StartIFramesTimer == false)
+		//{	
+			GD.Print("SPIKES MADE CONTACT");		
 			//Decreases the players HP by 1 
 			currentHP--;
 			EmitSignal(SignalName.LoseHP, currentHP);
@@ -199,15 +228,17 @@ public partial class GymProject : CharacterBody2D
 			Vector2 playerPosition = Position;
 			float Yknockback = 5f;
 			Position = new Vector2(playerPosition.X, playerPosition.Y - Yknockback);
-		}
+			
+		//}
 	}
 
-	public void OnPlayerOnMagma(CharacterBody2D Area2D) // Does not have Iframes but instead a higher knockback
+	public void OnPlayerOnMagma(CharacterBody2D Area2D) 
+	// Does not have Iframes but instead a higher "knockback"
+	// (May or may not be used in the final product)
 	{
 			GD.Print("Player_got_hit(Player Script)");
 
 			Vector2 playerPosition = Position;
-							 //140f
 			float Yknockback = 300f;
 			Position = new Vector2(playerPosition.X, playerPosition.Y - Yknockback);
 			
@@ -225,7 +256,11 @@ public partial class GymProject : CharacterBody2D
 //Start on all things involving timers and scores
 
 
-
+// My core idea for these are to add additional points to the player depending on how
+// fast they cleared the level, because of timers being a bit buggy for me though I decided on
+// essentially a gold, silver and bronze point system where one dissapears after a certain ammount of time.
+// If the player then is fast enough for the "gold" time they will also get the bronze and silver time bonuses.
+// So in other words, "gold" or the EndOfLevel is worth more than itself alone.
 	public void EndOfLevel(CharacterBody2D Area2D)
 	{
 		if (timeOut)
@@ -233,9 +268,10 @@ public partial class GymProject : CharacterBody2D
 			GD.Print("1000 points earned");
 			pointsAmmount = pointsAmmount + 1000;
 			EmitSignal(SignalName.Points, pointsAmmount);
-			//QueueFree();
 		}
 		
+		
+		GD.Print("Final Score text is showing!");
 	}
 
 	public void EndOfLevel800(CharacterBody2D Area2D)
@@ -245,9 +281,10 @@ public partial class GymProject : CharacterBody2D
 			GD.Print("800 points earned");
 			pointsAmmount = pointsAmmount + 800;
 			EmitSignal(SignalName.Points, pointsAmmount);
-			//QueueFree();
+			
 		}
 		
+		GD.Print("Final Score text is showing!");
 	}
 
 	public void EndOfLevel500(CharacterBody2D Area2D)
@@ -257,20 +294,22 @@ public partial class GymProject : CharacterBody2D
 			GD.Print("500 points earned");
 			pointsAmmount = pointsAmmount + 500;
 			EmitSignal(SignalName.Points, pointsAmmount);
-			//QueueFree();
+			
 		}
+
+		GD.Print("Final Score text is showing!");
 	}
 
 
-	//Current time: 5 seconds
+	//Current time: 50 seconds
 	public void OnTimerTimeout1()
-    {
-        GD.Print("Timer 1 (5s) stopped");
+	{
+		GD.Print("Timer 1 (5s) stopped");
 
 		timeOut = false;
-    }
+	}
 
-	//Current time: 10 seconds
+	//Current time: 60 seconds
 	public void OnTimerTimeOut2()
 	{
 		GD.Print("Timer 2 (10s) stopped");
@@ -278,7 +317,7 @@ public partial class GymProject : CharacterBody2D
 		timeOut2 = false;
 	}
 
-	//Current time: 15 seconds
+	//Current time: 80 seconds
 	public void OnTimerTimeOut3()
 	{
 		GD.Print("Timer 3 (15s) stopped");
@@ -288,25 +327,48 @@ public partial class GymProject : CharacterBody2D
 
 	public void GameOverTimer()
 	{
-		//Tillfälligt, du har DeathScreen för detta, ta bort denna connection
+		//Tillfälligt, du har DeathScreen för detta, ta bort denna
 		var tree = GetTree();
 		tree.ReloadCurrentScene();
 	}
 
+	//Just here to prevent the player from repeatedly pressing/holding attack through levels
+	public void OnAttackCDTimerTimeOut()
+	{
+		if (attackCooldownState == true)
+		{
+			GD.Print("Attack Cooldown Reset");
+		}
+		else if (attackCooldownState == false)
+		{
+			attackCooldownState = true;
+		}
+	}
+
+
 //End on all things involving timers and scores
 
-	//If the player exits the map area
-    public override void _Process(double delta)
-    {
-       //GD.Print(Position.Y);
+	public override void _Process(double delta)
+	{
+	   
+	   //If the player falls of a ledge or somehow excits the map area
 	   if(Position.Y > 2000)
 	   {
 			EmitSignal(SignalName.PlayerOutOfBounds);
+			
 			currentHP--;
 			EmitSignal(SignalName.LoseHP, currentHP);
 			PlayerTakingDmgSE.Play();
 	   }
-    }
+
+	   //Check MainScene.cs, how I reseted the score with Player.pointsAmmount = -1;
+	   if (pointsAmmount == -1)
+	   {
+			GD.Print("Points reseted after level change");
+			pointsAmmount = 0;
+			EmitSignal(SignalName.Points, pointsAmmount);
+	   }
+	}
 	
 	//Attack hits an enemy
 	public void OnCollisionWEnemy(character_body_2d Area2D)
@@ -332,7 +394,7 @@ public partial class GymProject : CharacterBody2D
 	}
 
 
-    public override void _PhysicsProcess(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 
 		
@@ -360,7 +422,7 @@ public partial class GymProject : CharacterBody2D
 			velocity.Y += gravity * (float)delta * 2;
 	
 		} 
-		else 
+		else
 		{
 			djump = false;
 		}
@@ -387,12 +449,10 @@ public partial class GymProject : CharacterBody2D
 		else if (Input.IsActionJustPressed("fastfall") && IsOnFloor())//Drop through one way platforms
 		{
 			Vector2 platformDrop = Position + new Vector2(0, 1);
-            Position = platformDrop;
+			Position = platformDrop;
 			
 		}
 
-
-		
 
 		//Handle left and right movement
 		if (Input.IsActionPressed("Right"))//d key 
@@ -423,6 +483,37 @@ public partial class GymProject : CharacterBody2D
 				}
 				
 			}
+
+			else if (Input.IsActionPressed("Right") & Input.IsActionPressed("attack"))
+			{
+
+				//Ta bort animationPlayer
+
+				if (attackCooldownState == true)
+				{
+					currentState = state.Attack;
+					attackReveal.Disabled = false;
+					attackCooldownState = false;
+					animationHandler.Play("WalkAndAttack");
+					SwordSwingSE.Play();
+
+					GD.Print("Walk and Attack");
+				}
+				else if (attackCooldownState == false)
+				{
+					//animationHandler.Play("walk");
+				}
+
+				moveRight = 80;
+				velocity.X += moveRight;
+				//Limits the acceleration ammount
+				if(velocity.X > 500)
+				{
+					velocity.X = 500;
+				}
+				
+			}
+
 			else 
 			{
 				animationHandler.Play("walk");
@@ -466,23 +557,39 @@ public partial class GymProject : CharacterBody2D
 				}
 			}
 
+
 			//Ny animationkod för två samtidigt
 			else if (Input.IsActionPressed("Left") & Input.IsActionPressed("attack"))
-			//Funkar om left är pressed och Attack pressed
-			//Du kan ha det på båda pressed men lösa det med en opålitlig timer som Iframes
-			//Spelar typ ingen roll däremot, folk ser inte hitboxen.
 			{
 
-				//Ta bort animationPlayer
 
-				GD.Print("Walking and attacking");
-				animationHandler.Play("WalkAndAttack");
-				
-				//SwordSwingSE.Play();
-				//Ger konstant ljud
-				
-				currentState = state.Attack;
-				attackReveal.Disabled = false;
+				if (attackCooldownState == true)
+				{
+					
+					if ( animationHandler.IsPlaying() )
+					{
+						animationHandler.Stop();
+						animationHandler.Play("WalkAndAttack");
+					}
+					
+					currentState = state.Attack;
+					attackReveal.Disabled = false;
+					attackCooldownState = false;
+					animationHandler.Play("WalkAndAttack");
+					SwordSwingSE.Play();
+
+					GD.Print("LEFT & ATK REACHED");
+					GD.Print("Walk and Attack");
+				}
+				else if (attackCooldownState == false)
+				{
+					if ( animationHandler.IsPlaying() )
+					{
+						GD.Print("animation stopped");
+						animationHandler.Stop();
+					}
+					animationHandler.Play("walk");
+				}
 
 				moveLeft = -80;
 				velocity.X += moveLeft;
@@ -511,6 +618,7 @@ public partial class GymProject : CharacterBody2D
 				}
 			}
 		}
+
 		else 
 		{
 			velocity.X = 0;
@@ -549,20 +657,16 @@ public partial class GymProject : CharacterBody2D
 		if (Input.IsActionJustPressed("attack"))
 		//Hela animationen spelas bara om man håller inne och ändrar till IsActionPressed
 		{
-			SwordSwingSE.Play();
-			animationHandler.Play("attack");
-			
-/*
-			if (currentState != state.Idle )
+			if (attackCooldownState == true)
 			{
 				currentState = state.Attack;
-			}
-*/
-			currentState = state.Attack;
-			attackReveal.Disabled = false;
-			
-			GD.Print("Attack_Text");
-			
+				attackReveal.Disabled = false;
+				attackCooldownState = false;
+				SwordSwingSE.Play();
+				animationHandler.Play("attack");
+
+				GD.Print("Attack_Text");
+			}	
 		}
 		else 
 		{
@@ -573,9 +677,29 @@ public partial class GymProject : CharacterBody2D
 
 		}//If dmgTaken == true end
 
+		
+			if (Input.IsActionPressed("run") & (Input.IsActionPressed("Left") || 
+			Input.IsActionPressed("Right")) & Input.IsActionPressed("attack"))
+			{
+				if (attackCooldownState == true)
+				{
+					currentState = state.Attack;
+					attackReveal.Disabled = false;
+					attackCooldownState = false;
+					animationHandler.Play("WalkAndAttack");
+					SwordSwingSE.Play();
 
+					GD.Print("RUN AND ATK");
+				}
+				else if (attackCooldownState == false)
+				{
+					animationHandler.Play("run");
+				}
+			}
+	
+		
 
-
+		
 		/*
 		if (velocity.X < 0)// left
 		{
@@ -608,99 +732,90 @@ public partial class GymProject : CharacterBody2D
 		
 		if (isWallSliding == true && !IsOnFloor()) //Player is on a wall
 		{
-			if (IsOnWall() && Input.IsActionJustPressed("Jump") && Input.IsActionPressed("Right"))
-			//Can jump off a wall
+			if (isWallJumpAbable)
 			{
-					isWallSliding = false;
-					djump = false;
-					
-					velocity.Y += gravity * (float)delta * 2; //Normal gravity
-					velocity.X += -wallPushBack;
-					//Walljump
-					
-					velocity.Y = jumpHeight;
-					//Limits the acceleration ammount 
-					if (velocity.Y > 500)
-					{
-						velocity.Y = 500;
-					}
-					animationHandler.Play("walljump");
-					animationHandler.FlipH = false;
-					spriteFlip.FlipH = false;
-					JumpSE.Play();
-			}
-
-			else if (IsOnWall() && Input.IsActionJustPressed("Jump") && Input.IsActionPressed("Left"))
-			//Can jump off a wall
-			{
-					djump = false;
-					//Restore double jump after jumping once to for easier platforming
-					isWallSliding = false;
-					
-					
-					velocity.Y += gravity * (float)delta * 2; //Normal gravity
-					velocity.X += wallPushBack;
-					//Walljump
-					
-					velocity.Y = jumpHeight;
-					//Limits the acceleration ammount 
-					if (velocity.Y > 500)
-					{
-						velocity.Y = 500;
-					}
-					animationHandler.Play("walljump");
-					JumpSE.Play();
-			}
-
+				
 			
+				if (IsOnWall() && Input.IsActionJustPressed("Jump") && Input.IsActionPressed("Right"))
+				//Can jump off a wall
+				{
+						isWallSliding = false;
+						
+						djump = false;
+						
+						
+						
+						velocity.Y += gravity * (float)delta * 2; //Normal gravity
+						velocity.X += -wallPushBack;
+						//Walljump
+						
+						velocity.Y = jumpHeight;
+						//Limits the acceleration ammount 
+						if (velocity.Y > 500)
+						{
+							velocity.Y = 500;
+						}
+						animationHandler.Play("walljump");
+						animationHandler.FlipH = false;
+						spriteFlip.FlipH = false;
+						JumpSE.Play();
+				}
 
-			else if ( IsOnWall() && (Input.IsActionPressed("Right") || Input.IsActionPressed("Left")) )
-			//Simple wallsliding
-			{
-				animationHandler.Play("walljump"); //Same animation used for walljump
-			
-				isWallSliding = false;
-				velocity.Y += (wallSlideGravity * (float)delta);
+				else if (IsOnWall() && Input.IsActionJustPressed("Jump") && Input.IsActionPressed("Left"))
+				//Can jump off a wall
+				{
+					
+						djump = false;
+				
+						
+						isWallSliding = false;
+						
+						
+						velocity.Y += gravity * (float)delta * 2; //Normal gravity
+						velocity.X += wallPushBack;
+						//Walljump
+						
+						velocity.Y = jumpHeight;
+						//Limits the acceleration ammount 
+						if (velocity.Y > 500)
+						{
+							velocity.Y = 500;
+						}
+						animationHandler.Play("walljump");
+						JumpSE.Play();
+				}
 
-				velocity.Y = Mathf.Clamp(velocity.Y, -wallSlideSpeed, wallSlideSpeed);
-				//Returns the velocity.Y variable if its inbetween -wallSlideSpeed and wallSlideSpeed
-				//																(-100 och 100)
+				
+
+				else if ( IsOnWall() && (Input.IsActionPressed("Right") || Input.IsActionPressed("Left")) )
+				//Simple wallsliding
+				{
+					animationHandler.Play("walljump"); //Same animation used for walljump
+				
+					isWallSliding = false;
+					velocity.Y += (wallSlideGravity * (float)delta);
+
+					velocity.Y = Mathf.Clamp(velocity.Y, -wallSlideSpeed, wallSlideSpeed);
+					//Returns the velocity.Y variable if its inbetween -wallSlideSpeed and wallSlideSpeed
+					//																(-100 och 100)
+				}
 			}
 		}
 		
 		
 		//Death and respawn for the player
-        if (currentHP <= 0)
+		if (currentHP <= 0)
 		{
-			//EmitSignal(SignalName.Death);
-			//Problem, also pauses the 'R' button input		
-			//	|
-			//	V
-			//GetTree().Paused = true;
-
 			GD.Print("Player died");
-
-			//For a normal respawn without the text and 'R' button
-			//Tillfälligt, ska tas bort
 			
-			var tree = GetTree();
-			tree.ReloadCurrentScene();
-			currentHP = 3;
 			
+			//currentHP = 3;
 		}
 
 
 		switch (currentState)
 		{
-/*
-			case state.Attack:
-				AnimationSwitch.Play("Attack");
-				//animationHandler.Play("attack");
-				//tips för animation, gör om dem till states
-				//Finite state machine
-			break;
-*/
-//Ta bort animationPlayer
+
 			case state.Idle:
 				AnimationSwitch.Play("Idle");
 			break;

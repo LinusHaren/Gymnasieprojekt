@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5hsui0437tss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hot6"]
+size = Vector2(76, 2568)
+
+[node name="cancelWallJump" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 1108)
+shape = SubResource("RectangleShape2D_2hot6")
+debug_color = Color(0.870588, 0.254902, 0.603922, 0.419608)

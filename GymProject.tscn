@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dqqa486b3wugk"]
+[gd_scene load_steps=53 format=3 uid="uid://dqqa486b3wugk"]
 
 [ext_resource type="Script" path="res://GymProject.cs" id="1_f8vj0"]
 [ext_resource type="Texture2D" uid="uid://cd2nogih13aeq" path="res://imgs/PlayerSprites/Multiple animations at once/PlayerWalk&AttackSpriteSheet.png" id="2_1lxit"]
@@ -18,6 +18,9 @@
 [ext_resource type="AudioStream" uid="uid://cx6yf5wm2dctm" path="res://audio/DmgTaken.wav" id="11_d2emm"]
 [ext_resource type="AudioStream" uid="uid://dxm101k5f67ah" path="res://audio/jump.wav" id="11_t8ky0"]
 [ext_resource type="AudioStream" uid="uid://b8osi1h2ixuq8" path="res://audio/PlayerHurt.wav" id="13_hnru6"]
+[ext_resource type="Script" path="res://FinalScoreScreen.cs" id="13_it2dq"]
+[ext_resource type="PackedScene" uid="uid://y133cbn3m82v" path="res://PauseMenu.tscn" id="14_57w7r"]
+[ext_resource type="PackedScene" uid="uid://0sqrnma2hsua" path="res://GameOverOptions.tscn" id="15_n20vh"]
 [ext_resource type="AudioStream" uid="uid://cd0xttxn861is" path="res://audio/SwordSwing.wav" id="18_yrduc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ctsef"]
@@ -170,18 +173,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg6ie"]
-size = Vector2(60, 67)
+size = Vector2(104.959, 177.543)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bfm64"]
-size = Vector2(98, 99)
+size = Vector2(98, 98)
 
 [sub_resource type="SystemFont" id="SystemFont_5a11m"]
+subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_7kuht"]
 default_font = SubResource("SystemFont_5a11m")
 default_font_size = 50
 
 [sub_resource type="FontFile" id="FontFile_7r8vl"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -190,6 +197,7 @@ cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/55/0 = Vector2(0, 0)
 cache/0/50/0/ascent = 0.0
 cache/0/50/0/descent = 0.0
 cache/0/50/0/underline_position = 0.0
@@ -198,6 +206,7 @@ cache/0/50/0/scale = 1.0
 cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/55/0 = Vector2(0, 0)
 cache/0/40/0/ascent = 0.0
 cache/0/40/0/descent = 0.0
 cache/0/40/0/underline_position = 0.0
@@ -206,12 +215,25 @@ cache/0/40/0/scale = 1.0
 cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/55/0/ascent = 0.0
+cache/0/55/0/descent = 0.0
+cache/0/55/0/underline_position = 0.0
+cache/0/55/0/underline_thickness = 0.0
+cache/0/55/0/scale = 1.0
+cache/0/55/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/55/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_n83nn"]
 default_font = SubResource("FontFile_7r8vl")
 default_font_size = 50
 
 [sub_resource type="FontFile" id="FontFile_ucb6o"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -220,6 +242,7 @@ cache/0/16/0/scale = 1.0
 cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
 cache/0/40/0/ascent = 0.0
 cache/0/40/0/descent = 0.0
 cache/0/40/0/underline_position = 0.0
@@ -228,6 +251,7 @@ cache/0/40/0/scale = 1.0
 cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/80/0 = Vector2(0, 0)
 cache/0/50/0/ascent = 0.0
 cache/0/50/0/descent = 0.0
 cache/0/50/0/underline_position = 0.0
@@ -236,6 +260,16 @@ cache/0/50/0/scale = 1.0
 cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
 cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
 
 [sub_resource type="Theme" id="Theme_iy0ci"]
 default_font = SubResource("FontFile_ucb6o")
@@ -243,6 +277,51 @@ default_font_size = 40
 
 [sub_resource type="Theme" id="Theme_msab7"]
 default_font_size = 80
+
+[sub_resource type="FontFile" id="FontFile_88tm4"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/55/0/ascent = 0.0
+cache/0/55/0/descent = 0.0
+cache/0/55/0/underline_position = 0.0
+cache/0/55/0/underline_thickness = 0.0
+cache/0/55/0/scale = 1.0
+cache/0/55/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/55/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/55/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_6ra4y"]
+default_font = SubResource("FontFile_88tm4")
+default_font_size = 55
 
 [sub_resource type="Animation" id="Animation_0oxri"]
 resource_name = "Attack"
@@ -334,7 +413,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow2qq"]
-size = Vector2(100, 102)
+size = Vector2(102, 103)
 
 [node name="BetaChar" type="CharacterBody2D"]
 position = Vector2(535, 186)
@@ -355,7 +434,7 @@ position = Vector2(-169, -130)
 shape = SubResource("RectangleShape2D_sg6ie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-22, -28.5)
+position = Vector2(-22, -29)
 shape = SubResource("RectangleShape2D_bfm64")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
@@ -415,6 +494,23 @@ text = "[center][color=red]Game Over[/color]
 Press 'R' to try again[/center]"
 script = ExtResource("9_1xst3")
 
+[node name="FinalScoreScreen" type="RichTextLabel" parent="UI"]
+visible = false
+anchors_preset = -1
+anchor_right = 1.003
+anchor_bottom = 0.642
+offset_right = -0.456055
+offset_bottom = -0.0160217
+theme = SubResource("Theme_6ra4y")
+bbcode_enabled = true
+text = "[center][color=white]Final points: 0[/color]
+[/center]"
+script = ExtResource("13_it2dq")
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("14_57w7r")]
+
+[node name="GameOverOptions" parent="UI" instance=ExtResource("15_n20vh")]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_l2rka")
@@ -423,8 +519,9 @@ libraries = {
 [node name="DmgPlayer" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DmgPlayer"]
-position = Vector2(-22, -27)
+position = Vector2(-22, -28.5)
 shape = SubResource("RectangleShape2D_ow2qq")
+debug_color = Color(1, 0.00392157, 0.0705882, 0.0196078)
 
 [node name="PlayerHitMarker" type="Marker2D" parent="."]
 position = Vector2(-179, -109)
@@ -436,18 +533,18 @@ script = ExtResource("8_gow5a")
 
 [node name="EndGoal1sTimer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 5.0
+wait_time = 50.0
 one_shot = true
 autostart = true
 
 [node name="EndGoal2sTimer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 10.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
 [node name="EndGoal3sTimer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 80.0
 one_shot = true
 autostart = true
 
@@ -462,27 +559,32 @@ process_callback = 0
 wait_time = 3.0
 autostart = true
 
+[node name="AttackCDTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 1.5
+autostart = true
+
 [node name="CoinSE" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_l2sbv")
-volume_db = -10.0
+volume_db = -30.0
 
 [node name="JumpSE" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_t8ky0")
-volume_db = -10.0
+volume_db = -30.0
 pitch_scale = 0.7
 
 [node name="EnemyTakingDmgSE" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_d2emm")
-volume_db = -5.0
+volume_db = -25.0
 pitch_scale = 0.4
 
 [node name="PlayerTakingDmgSE" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_hnru6")
-volume_db = -10.0
+volume_db = -30.0
 
 [node name="SwordSwingSE" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_yrduc")
-volume_db = -10.0
+volume_db = -30.0
 
 [node name="CubeSprite" type="Sprite2D" parent="."]
 visible = false
@@ -492,7 +594,9 @@ texture = ExtResource("2_mmt3d")
 
 [connection signal="Death" from="." to="UI/DeathScreen" method="OnPlayerDeath"]
 [connection signal="LoseHP" from="." to="UI/HP" method="PlayerHit"]
+[connection signal="LoseHP" from="." to="UI/GameOverOptions" method="PlayerHit"]
 [connection signal="Points" from="." to="UI/Points" method="pointsAmmount"]
+[connection signal="Points" from="." to="UI/FinalScoreScreen" method="OnFinalScoreCleared"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="OnAnimatedSprite2DAnimationFinished"]
 [connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="OnCollisionWEnemy"]
 [connection signal="area_entered" from="DmgPlayer" to="." method="CoinPickup"]
@@ -504,3 +608,4 @@ texture = ExtResource("2_mmt3d")
 [connection signal="timeout" from="GameOverTimer" to="." method="GameOverTimer"]
 [connection signal="timeout" from="GameOverTimer" to="UI/DeathScreen" method="TimeOver"]
 [connection signal="timeout" from="IFramesTimer" to="." method="OnIFramesTimerTimeout"]
+[connection signal="timeout" from="AttackCDTimer" to="." method="OnAttackCDTimerTimeOut"]

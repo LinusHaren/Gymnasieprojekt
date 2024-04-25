@@ -1,12 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://cakm67syf104b"]
+[gd_scene load_steps=20 format=3 uid="uid://cakm67syf104b"]
 
 [ext_resource type="PackedScene" uid="uid://dqqa486b3wugk" path="res://GymProject.tscn" id="2_5mrhq"]
 [ext_resource type="Texture2D" uid="uid://csw60nm2y2oa3" path="res://nature-paltformer-tileset-16x16 (1).png" id="2_70ypu"]
 [ext_resource type="Script" path="res://Main.cs" id="2_obcab"]
-[ext_resource type="PackedScene" uid="uid://cpjo36ywpslm1" path="res://character_body_2d.tscn" id="4_j62y7"]
 [ext_resource type="PackedScene" uid="uid://ko2ui3nl74dt" path="res://MovingCirclePlatform.tscn" id="6_ge7xm"]
 [ext_resource type="PackedScene" uid="uid://bwjq536opymhh" path="res://MovingPlatform.tscn" id="7_kb5iu"]
-[ext_resource type="Texture2D" uid="uid://uxe6t2jmj15a" path="res://ControlsSign.png" id="8_2i2f6"]
 [ext_resource type="PackedScene" uid="uid://b3qco7xay2btr" path="res://coin.tscn" id="9_pwj0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cddyc"]
@@ -330,64 +328,52 @@ shape = SubResource("RectangleShape2D_86bir")
 one_way_collision = true
 debug_color = Color(0, 0.537255, 0.964706, 0.419608)
 
-[node name="Level1" type="Node" parent="."]
+[node name="Testing ground" type="Node" parent="."]
 script = ExtResource("2_obcab")
 
-[node name="BetaChar" parent="Level1" instance=ExtResource("2_5mrhq")]
-position = Vector2(-910, -1129)
+[node name="BetaChar" parent="Testing ground" instance=ExtResource("2_5mrhq")]
+position = Vector2(-1194, -405)
 
-[node name="Camera2D" type="Camera2D" parent="Level1/BetaChar"]
+[node name="Camera2D" type="Camera2D" parent="Testing ground/BetaChar"]
 position = Vector2(-34, -13)
 zoom = Vector2(0.9, 0.9)
 drag_horizontal_offset = 0.2
 
-[node name="BetaEnemy" parent="Level1" instance=ExtResource("4_j62y7")]
-position = Vector2(1334, 104)
+[node name="PlayerSpawn" type="Marker2D" parent="Testing ground"]
+position = Vector2(13, -1629)
 
-[node name="PlayerSpawn" type="Marker2D" parent="Level1"]
-position = Vector2(-195, -723)
+[node name="MovingCirclePlatform" parent="Testing ground" instance=ExtResource("6_ge7xm")]
+position = Vector2(185, -727)
 
-[node name="EnemySpawn" type="Marker2D" parent="Level1"]
-position = Vector2(1545, 174)
-
-[node name="MovingCirclePlatform" parent="Level1" instance=ExtResource("6_ge7xm")]
-position = Vector2(321, -954)
-
-[node name="MovingPlatform" parent="Level1" instance=ExtResource("7_kb5iu")]
+[node name="MovingPlatform" parent="Testing ground" instance=ExtResource("7_kb5iu")]
 position = Vector2(374, -337)
 
-[node name="Area2D" type="Area2D" parent="Level1"]
-position = Vector2(875, 173)
+[node name="Area2D" type="Area2D" parent="Testing ground"]
+position = Vector2(-1477, -514)
 
-[node name="End1 (1000 points)" type="CollisionShape2D" parent="Level1/Area2D"]
+[node name="End1 (1000 points)" type="CollisionShape2D" parent="Testing ground/Area2D"]
 position = Vector2(357, -521)
 shape = SubResource("RectangleShape2D_xlhx2")
 debug_color = Color(0.580392, 0.552941, 0, 0.419608)
 
-[node name="Area2D2" type="Area2D" parent="Level1"]
+[node name="Area2D2" type="Area2D" parent="Testing ground"]
+position = Vector2(-2490, -691)
 
-[node name="End2 (800 ponits)" type="CollisionShape2D" parent="Level1/Area2D2"]
+[node name="End2 (800 ponits)" type="CollisionShape2D" parent="Testing ground/Area2D2"]
 position = Vector2(1555, -346)
 shape = SubResource("RectangleShape2D_xlhx2")
 debug_color = Color(0.862745, 0.968627, 0.980392, 0.419608)
 
-[node name="Area2D3" type="Area2D" parent="Level1"]
+[node name="Area2D3" type="Area2D" parent="Testing ground"]
+position = Vector2(-2570, -680)
 
-[node name="End3 (500 points)" type="CollisionShape2D" parent="Level1/Area2D3"]
+[node name="End3 (500 points)" type="CollisionShape2D" parent="Testing ground/Area2D3"]
 position = Vector2(1865, -352)
 shape = SubResource("RectangleShape2D_12te2")
 debug_color = Color(0.768627, 0.407843, 0.12549, 0.419608)
 
-[node name="Marker2D" type="Marker2D" parent="Level1"]
+[node name="Marker2D" type="Marker2D" parent="Testing ground"]
 position = Vector2(-717, 125)
-
-[node name="ControlsSign" type="Sprite2D" parent="."]
-position = Vector2(-943, -1039)
-scale = Vector2(0.537725, 0.63964)
-texture = ExtResource("8_2i2f6")
-
-[node name="BetaEnemy" parent="." instance=ExtResource("4_j62y7")]
-position = Vector2(1027, -236)
 
 [node name="Coin" parent="." instance=ExtResource("9_pwj0u")]
 position = Vector2(-420, -252)
@@ -398,10 +384,10 @@ position = Vector2(-516, -252)
 [node name="Coin3" parent="." instance=ExtResource("9_pwj0u")]
 position = Vector2(-601, -252)
 
-[connection signal="PlayerOutOfBounds" from="Level1/BetaChar" to="Level1" method="OnBetaCharPlayerOutOfBounds"]
-[connection signal="body_entered" from="Level1/Area2D" to="Level1/BetaChar" method="EndOfLevel"]
-[connection signal="body_entered" from="Level1/Area2D2" to="Level1/BetaChar" method="EndOfLevel800"]
-[connection signal="body_entered" from="Level1/Area2D3" to="Level1/BetaChar" method="EndOfLevel500"]
-[connection signal="body_entered" from="Coin" to="Level1/BetaChar" method="OnPlayerCoinCollected"]
-[connection signal="body_entered" from="Coin2" to="Level1/BetaChar" method="OnPlayerCoinCollected"]
-[connection signal="body_entered" from="Coin3" to="Level1/BetaChar" method="OnPlayerCoinCollected"]
+[connection signal="PlayerOutOfBounds" from="Testing ground/BetaChar" to="Testing ground" method="OnBetaCharPlayerOutOfBounds"]
+[connection signal="body_entered" from="Testing ground/Area2D" to="Testing ground/BetaChar" method="EndOfLevel"]
+[connection signal="body_entered" from="Testing ground/Area2D2" to="Testing ground/BetaChar" method="EndOfLevel800"]
+[connection signal="body_entered" from="Testing ground/Area2D3" to="Testing ground/BetaChar" method="EndOfLevel500"]
+[connection signal="body_entered" from="Coin" to="Testing ground/BetaChar" method="OnPlayerCoinCollected"]
+[connection signal="body_entered" from="Coin2" to="Testing ground/BetaChar" method="OnPlayerCoinCollected"]
+[connection signal="body_entered" from="Coin3" to="Testing ground/BetaChar" method="OnPlayerCoinCollected"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://rg8x7ucoyeme"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j3sw"]
+size = Vector2(789, 1254)
+
+[node name="Invisible Wall" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-386.5, 25)
+shape = SubResource("RectangleShape2D_7j3sw")
+debug_color = Color(1, 0.462745, 0.701961, 0.419608)

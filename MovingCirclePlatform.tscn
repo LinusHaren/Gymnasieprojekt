@@ -65,7 +65,7 @@ _data = {
 
 [node name="CircleRotation" type="AnimatableBody2D" parent="."]
 position = Vector2(300, 0)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CircleRotation"]

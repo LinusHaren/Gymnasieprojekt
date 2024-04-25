@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://blh3a4cw0e5hx" path="res://imgs/Obstacles/SpikesX5.png" id="1_2xo7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jis5h"]
-size = Vector2(661, 134)
+size = Vector2(660, 144)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvuhr"]
-size = Vector2(1344, 304)
+size = Vector2(1336, 304)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)

@@ -75,12 +75,12 @@ script = ExtResource("1_j3rq4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(283.5, 47)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(3, 3)
 texture = ExtResource("1_8vspw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(284, 47)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_ytixt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

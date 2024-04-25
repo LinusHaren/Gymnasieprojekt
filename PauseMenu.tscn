@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://y133cbn3m82v"]
+
+[ext_resource type="Script" path="res://PauseMenu.cs" id="1_ktlug"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_hgkw4"]
+device = -1
+keycode = 82
+unicode = 114
+
+[sub_resource type="Shortcut" id="Shortcut_vcbu0"]
+events = [SubResource("InputEventKey_hgkw4")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_kjitt"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_l0wcn"]
+events = [SubResource("InputEventKey_kjitt")]
+
+[node name="PauseMenu" type="Node"]
+script = ExtResource("1_ktlug")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = -1
+anchor_left = 0.437
+anchor_top = 0.41
+anchor_right = 0.575
+anchor_bottom = 0.662
+offset_left = -0.423981
+offset_top = 0.319977
+offset_right = -0.399963
+offset_bottom = 0.0239258
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_vcbu0")
+text = "Resume
+[R]"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_l0wcn")
+text = "Quit
+[Q]"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="OnQuitPressed"]

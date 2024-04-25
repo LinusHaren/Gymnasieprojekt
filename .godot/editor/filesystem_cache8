@@ -1,104 +1,128 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707994980
-Area2D.cs::CSharpScript::-1::1698056694::0::1::::<><>::
-BetaChar.cs::CSharpScript::-1::1696496772::0::1::::<><>::
-betaEnemy.png::CompressedTexture2D::8261493728778082175::1697705691::1700044185::1::::<><>::
-character_body_2d.cs::CSharpScript::-1::1707394506::0::1::::<><>::
-character_body_2d.tscn::PackedScene::5845155128190798878::1707748039::0::1::::<><>::res://character_body_2d.cs<>uid://b4pia2voiwudq::::res://Slime Enemy Sprites/RedSlimeIdle192x192.png<>uid://pix1ju4mnlfi::::res://Slime Enemy Sprites/RedSlimeTileSet_Fixed.png
-circle.png::CompressedTexture2D::948374311991328655::1702470841::1702470848::1::::<><>::
-CircleRotationPlatform.cs::CSharpScript::-1::1703068139::0::1::::<><>::
-CircleRotationPlatform.tscn::PackedScene::7613598932502432325::1704555937::0::1::::<><>::uid://ck85j7kgltmrg
-Coin.cs::CSharpScript::-1::1704982834::0::1::::<><>::
-coin.png::CompressedTexture2D::2235544649223702264::1701092182::1701092207::1::::<><>::
-coin.tscn::PackedScene::4384886501034006963::1707748040::0::1::::<><>::res://Coin.cs<>uid://636dgm76lc6k::::res://coin.png
-ControlsSign.png::CompressedTexture2D::1451556828764851788::1704485259::1704485260::1::::<><>::
-DeathScreen.cs::CSharpScript::-1::1706180050::0::1::::<><>::
-Enemy.cs::CSharpScript::-1::1698393480::0::1::::<><>::
-Enemy.tscn::PackedScene::6630023910193188001::1699122277::0::1::::<><>::uid://bcpqf2wyttavi
-enemy_test.tscn::PackedScene::6131342511221806806::1698393348::0::1::::<><>::res://enemy_test.cs<>uid://bcpqf2wyttavi
-FollowingSlime.cs::CSharpScript::-1::1707469707::0::1::::<><>::
-FollowingSlime.tscn::PackedScene::2472085535106616438::1707748040::0::1::::<><>::res://FollowingSlime.cs<>uid://cev5plm0o0kce::::res://imgs/EnemySprites/YellowSlimeTileSet.png
-grass.png::CompressedTexture2D::7319500353967309676::1696434075::1700044185::1::::<><>::
-grassland.cs::CSharpScript::-1::1696496482::0::1::::<><>::
-grassland.tscn::PackedScene::5613721837540680750::1698422346::0::1::::<><>::uid://bi3the6mmybfh
-GymProject.cs::CSharpScript::-1::1707748073::0::1::::<><>::
-GymProject.tscn::PackedScene::8315367162619252214::1707748077::0::1::::<><>::res://GymProject.cs<>uid://cd2nogih13aeq::::res://imgs/PlayerSprites/Multiple animations at once/PlayerWalk&AttackSpriteSheet.png<>uid://cb6eoiuv2nlyh::::res://Namnlös.png<>res://UI.cs<>res://HP.cs<>uid://chge0pf0bprgs::::res://imgs/PlayerSprites/PlayerSwordSwingSpriteSheet.png<>uid://bakiy7oludtn5::::res://imgs/PlayerSprites/PlayerStartSprite.png<>uid://80qaxoevdnf2::::res://imgs/PlayerSprites/PlayerJumpSpriteSheet.png<>uid://bnn48i4sd5dnu::::res://imgs/PlayerSprites/pixil-frame-0 (3).png<>uid://c4y4htjv4vlb8::::res://imgs/PlayerSprites/PlayerWallJumpSprite.png<>res://Points.cs<>res://TimerText.cs<>res://Timer.cs<>res://DeathScreen.cs<>uid://b81i4pphhqau8::::res://audio/pickupCoin.wav<>uid://cx6yf5wm2dctm::::res://audio/DmgTaken.wav<>uid://dxm101k5f67ah::::res://audio/jump.wav<>uid://b8osi1h2ixuq8::::res://audio/PlayerHurt.wav<>uid://cd0xttxn861is::::res://audio/SwordSwing.wav
-HP.cs::CSharpScript::-1::1704974563::0::1::::<><>::
-icon.svg::CompressedTexture2D::7738604186805820947::1695806537::1695806550::1::::<><>::
-Level1.tscn::PackedScene::3851495486424859363::1707748039::0::1::::<><>::uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>res://Main.cs<>uid://cpjo36ywpslm1::::res://character_body_2d.tscn<>uid://ko2ui3nl74dt::::res://MovingCirclePlatform.tscn<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://uxe6t2jmj15a::::res://ControlsSign.png<>uid://b3qco7xay2btr::::res://coin.tscn
-Level2.tscn::PackedScene::9209915802114762495::1707748039::0::1::::<><>::uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png
-LevelBase.tscn::PackedScene::1937390678402344343::1696604996::0::1::::<><>::res://MainLevelBase.cs<>res://BetaChar.cs<>res://GymProject.cs<>res://LevelGround.cs<>uid://dqqa486b3wugk
-MagmaBlock.tscn::PackedScene::6840320326715553518::1707748040::0::1::::<><>::uid://ba622y7gdl7p6::::res://imgs/Obstacles/MagmaBlock.png
-Main.cs::CSharpScript::-1::1707471154::0::1::::<><>::
-MainLevelBase.cs::CSharpScript::-1::1696496681::0::1::::<><>::
-MainScene.cs::CSharpScript::-1::1707399868::0::1::::<><>::
-MainScene.tscn::PackedScene::7220212740799728870::1707748039::0::1::::<><>::res://MainScene.cs<>uid://c83jx1hw7re42::::res://imgs/Background/GameBackground2.png<>uid://bu4xtks0hirnv::::res://Level1.tscn<>uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://d4hl75vrlfqah::::res://Level2.tscn<>uid://c3b1mjh721pwe::::res://Spike.tscn<>uid://dlpgpdtvv25dc::::res://SpikesX5.tscn<>uid://c4prcuky82p7k::::res://MagmaBlock.tscn
-MovingCirclePlatform.tscn::PackedScene::732465263667929533::1707294604::0::1::::<><>::uid://ck85j7kgltmrg
-movingPlatform.png::CompressedTexture2D::5544693548061958784::1702470396::1702470428::1::::<><>::
-MovingPlatform.tscn::PackedScene::3950181208417601109::1707294604::0::1::::<><>::uid://ck85j7kgltmrg
-Namnlös.png::CompressedTexture2D::4907294242559460891::1696245137::1696245137::1::::<><>::
-nature-paltformer-tileset-16x16 (1).png::CompressedTexture2D::6083584437684593676::1699031776::1699031816::1::::<><>::
-node_2d.tscn::PackedScene::9199911612516946439::1696850592::0::1::::<><>::uid://dqqa486b3wugk
-pirate - kopia.png::CompressedTexture2D::6452229649736489309::1700846340::1700848816::1::::<><>::
-pirate.png::CompressedTexture2D::9033422900601472158::1700071999::1700072165::1::::<><>::
-platform.cs::CSharpScript::-1::1696848736::0::1::::<><>::
-platform.tscn::PackedScene::4395931178815766688::1698422347::0::1::::<><>::uid://bi3the6mmybfh
-PlatformEnemy.cs::CSharpScript::-1::1704560445::0::1::::<><>::
-PlatformEnemy.tscn::PackedScene::226355841624923433::1704881587::0::1::::<><>::res://character_body_2d.cs<>uid://dpx6uhp3rqd2n
-Points.cs::CSharpScript::-1::1704475598::0::1::::<><>::
-RedSlimeIdle.png::CompressedTexture2D::1189574543583429877::1705402406::1705402464::1::::<><>::
-Spike.tscn::PackedScene::6741793923358792300::1707748040::0::1::::<><>::uid://b0t2r0etsa48w::::res://imgs/Obstacles/Spike.png
-SpikesX5.tscn::PackedScene::7962696274178365544::1707748040::0::1::::<><>::uid://blh3a4cw0e5hx::::res://imgs/Obstacles/SpikesX5.png
-tile_map.tscn::PackedScene::4794270818102916959::1707748039::0::1::::<><>::uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>res://Main.cs<>uid://cpjo36ywpslm1::::res://character_body_2d.tscn<>uid://ko2ui3nl74dt::::res://MovingCirclePlatform.tscn<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://uxe6t2jmj15a::::res://ControlsSign.png<>uid://b3qco7xay2btr::::res://coin.tscn
-Timer.cs::CSharpScript::-1::1704478670::0::1::::<><>::
-TimerText.cs::CSharpScript::-1::1707745164::0::1::::<><>::
-UI.cs::CSharpScript::-1::1699441169::0::1::::<><>::
-UI.tscn::PackedScene::3465936874795368052::1699441418::0::1::::<><>::res://UI.cs<>res://HP.cs
-::res://audio/::1707212255
-DmgTaken.wav::AudioStreamWAV::6452648228500348130::1707060315::1707062112::1::::<><>::
-jump.wav::AudioStreamWAV::8800002656888463503::1707060267::1707062024::1::::<><>::
-pickupCoin.wav::AudioStreamWAV::4756864680669447897::1707058922::1707059377::1::::<><>::
-PlayerHurt.wav::AudioStreamWAV::4732662382185151593::1707118676::1707118991::1::::<><>::
-SwordSwing.wav::AudioStreamWAV::5036448797179778034::1707212209::1707212255::1::::<><>::
-::res://imgs/::1707400243
-::res://imgs/Background/::1707468727
-Clouds.png::CompressedTexture2D::2379182091871204636::1707400210::1707400248::1::::<><>::
-CloudsBackground.png::CompressedTexture2D::2849143314039588733::1707400365::1707400388::1::::<><>::
-GameBackground2.png::CompressedTexture2D::7147464688213405837::1707468706::1707468727::1::::<><>::
-GameBackground.png::CompressedTexture2D::2980046470220827390::1707468274::1707468309::1::::<><>::
-::res://imgs/EnemySprites/::1707393048
-YellowSlimeTileSet.png::CompressedTexture2D::5098797568915247416::1707392967::1707393048::1::::<><>::
-::res://imgs/Obstacles/::1707300500
-MagmaBlock.png::CompressedTexture2D::2452105279580317029::1707300465::1707300500::1::::<><>::
-Spike.png::CompressedTexture2D::4182035989422457196::1707242607::1707291150::1::::<><>::
-SpikesX5.png::CompressedTexture2D::3174650211087279597::1707295652::1707295754::1::::<><>::
-::res://imgs/Old sprites/::1707291150
-pixil-frame-0 (3).png::CompressedTexture2D::6792990572423123917::1707131937::1707291150::1::::<><>::
-PlayerIdleStance.png::CompressedTexture2D::5200687986201641357::1707130436::1707291150::1::::<><>::
-PlayerRunStance.png::CompressedTexture2D::2022088703596515498::1707131290::1707291150::1::::<><>::
-PlayerTestSpriteSheet.png::CompressedTexture2D::4196533715532429416::1707126853::1707291150::1::::<><>::
-PlayerWalkStance.png::CompressedTexture2D::703521094466727480::1707130938::1707291150::1::::<><>::
-Test2.png::CompressedTexture2D::7310763840445775431::1707127418::1707291150::1::::<><>::
-::res://imgs/PlayerSprites/::1707310941
-pixil-frame-0 (3).png::CompressedTexture2D::3327532751588547066::1707138192::1707138238::1::::<><>::
-PlayerJumpSprite.png::CompressedTexture2D::2806687293822445532::1707136316::1707136916::1::::<><>::
-PlayerJumpSpriteSheet.png::CompressedTexture2D::2368813985665079521::1707138998::1707139038::1::::<><>::
-PlayerStartSprite.png::CompressedTexture2D::2407594759130671196::1707134674::1707136916::1::::<><>::
-PlayerSword1Sprite.png::CompressedTexture2D::4886551245852556958::1707157121::1707158198::1::::<><>::
-PlayerSword2Sprite.png::CompressedTexture2D::2308040958396988864::1707157086::1707158198::1::::<><>::
-PlayerSwordSwingSpriteSheet.png::CompressedTexture2D::5276837848907581322::1707158157::1707158198::1::::<><>::
-PlayerWalkSprite.png::CompressedTexture2D::8769820080335318257::1707136798::1707136916::1::::<><>::
-PlayerWalkSpriteSheet.png::CompressedTexture2D::9006598980932675972::1707137988::1707138027::1::::<><>::
-PlayerWallJumpSprite.png::CompressedTexture2D::6859637205174765895::1707213676::1707214260::1::::<><>::
-PlayerWallJumpSpriteSheet.png::CompressedTexture2D::3793211159416929055::1707214212::1707214260::1::::<><>::
-::res://imgs/PlayerSprites/Multiple animations at once/::1707310945
-PlayerWalk&AttackSprite.png::CompressedTexture2D::6707913982310081356::1707310609::1707310944::1::::<><>::
-PlayerWalk&AttackSpriteSheet.png::CompressedTexture2D::5039960747532975352::1707310809::1707310945::1::::<><>::
-::res://Slime Enemy Sprites/::1707299323
-LeftRedSlimeIdle.png::CompressedTexture2D::295623074233179385::1705404870::1707299323::1::::<><>::
-LeftRedSlimeMoving.png::CompressedTexture2D::3225571163536447906::1705405088::1707299323::1::::<><>::
-RedSlimeIdle192x192.png::CompressedTexture2D::4453350002668089718::1705404302::1707299323::1::::<><>::
-RedSlimeMoving192x192.png::CompressedTexture2D::113833090034307378::1705404786::1707299323::1::::<><>::
-RedSlimeTileSet.png::CompressedTexture2D::9004583325408453350::1705488907::1707299323::1::::<><>::
-RedSlimeTileSetFixed.png::CompressedTexture2D::8209331619742036826::1705493362::1707299323::1::::<><>::
-RedSlimeTileSet_Fixed.png::CompressedTexture2D::1070791103018546726::1705493781::1707299323::1::::<><>::
+::res://::1714038786
+Area2D.cs::CSharpScript::-1::1698060294::0::1::::<><>::
+BetaChar.cs::CSharpScript::-1::1696500372::0::1::::<><>::
+betaEnemy.png::CompressedTexture2D::8261493728778082175::1697709291::1700047785::1::::<><>::
+cancelWallJump.tscn::PackedScene::4507665719023621858::1713203435::0::1::::<><>::
+character_body_2d.cs::CSharpScript::-1::1709233425::0::1::::<><>::
+character_body_2d.tscn::PackedScene::5845155128190798878::1713866826::0::1::::<><>::res://character_body_2d.cs<>uid://b4pia2voiwudq
+Checkpoint.tscn::PackedScene::3506309412959203973::1713866826::0::1::::<><>::uid://cmqq6r2gntg8j
+circle.png::CompressedTexture2D::948374311991328655::1702474441::1702474448::1::::<><>::
+CircleRotationPlatform.cs::CSharpScript::-1::1703071739::0::1::::<><>::
+CircleRotationPlatform.tscn::PackedScene::7613598932502432325::1711740749::0::1::::<><>::uid://ck85j7kgltmrg
+Coin.cs::CSharpScript::-1::1709813410::0::1::::<><>::
+coin.png::CompressedTexture2D::2235544649223702264::1701095782::1701095807::1::::<><>::
+coin.tscn::PackedScene::4384886501034006963::1712739081::0::1::::<><>::res://Coin.cs<>uid://636dgm76lc6k
+ControlsSign.png::CompressedTexture2D::1451556828764851788::1704488859::1704488860::1::::<><>::
+DeathScreen.cs::CSharpScript::-1::1711539254::0::1::::<><>::
+Enemy.cs::CSharpScript::-1::1698397080::0::1::::<><>::
+Enemy.tscn::PackedScene::6630023910193188001::1699125877::0::1::::<><>::uid://bcpqf2wyttavi
+enemy_test.tscn::PackedScene::6131342511221806806::1698396948::0::1::::<><>::res://enemy_test.cs<>uid://bcpqf2wyttavi
+export_presets.cfg::TextFile::-1::1713435868::0::1::::<><>::
+FinalScoreScreen.cs::CSharpScript::-1::1710419008::0::1::::<><>::
+FollowingSlime.cs::CSharpScript::-1::1707473307::0::1::::<><>::
+FollowingSlime.tscn::PackedScene::2472085535106616438::1707999057::0::1::::<><>::res://FollowingSlime.cs<>uid://cev5plm0o0kce
+GameOverOptions.cs::CSharpScript::-1::1711540050::0::1::::<><>::
+GameOverOptions.tscn::PackedScene::1792882422282114776::1713866826::0::1::::<><>::res://GameOverOptions.cs<>res://DeathScreen.cs
+grass.png::CompressedTexture2D::7319500353967309676::1696437675::1700047785::1::::<><>::
+grassland.cs::CSharpScript::-1::1696500082::0::1::::<><>::
+grassland.tscn::PackedScene::5613721837540680750::1698425946::0::1::::<><>::uid://bi3the6mmybfh
+GymProject.cs::CSharpScript::-1::1713890326::0::1::::<><>::
+GymProject.tscn::PackedScene::8315367162619252214::1713866824::0::1::::<><>::res://GymProject.cs<>uid://cd2nogih13aeq
+HP.cs::CSharpScript::-1::1711022324::0::1::::<><>::
+icon.svg::CompressedTexture2D::7738604186805820947::1695810137::1695810150::1::::<><>::
+InvisibleWall.tscn::PackedScene::1207643054145835916::1711821528::0::1::::<><>::
+Level1.tscn::PackedScene::3851495486424859363::1713866825::0::1::::<><>::uid://csw60nm2y2oa3
+Level2.tscn::PackedScene::9209915802114762495::1713866826::0::1::::<><>::uid://csw60nm2y2oa3
+LevelBase.tscn::PackedScene::1937390678402344343::1696608596::0::1::::<><>::res://MainLevelBase.cs<>res://BetaChar.cs<>res://GymProject.cs<>res://LevelGround.cs<>uid://dqqa486b3wugk
+MagmaBlock.tscn::PackedScene::6840320326715553518::1709813231::0::1::::<><>::uid://ba622y7gdl7p6
+Main.cs::CSharpScript::-1::1709726345::0::1::::<><>::
+MainLevelBase.cs::CSharpScript::-1::1696500281::0::1::::<><>::
+MainScene.cs::CSharpScript::-1::1713550922::0::1::::<><>::
+MainScene.tscn::PackedScene::7220212740799728870::1713890483::0::1::::<><>::res://MainScene.cs<>uid://c83jx1hw7re42::::res://imgs/Background/GameBackground2.png<>uid://bu4xtks0hirnv::::res://Level1.tscn<>uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://d4hl75vrlfqah::::res://Level2.tscn
+Menu.cs::CSharpScript::-1::1709808625::0::1::::<><>::
+Menu.tscn::PackedScene::2685673831215640811::1713866826::0::1::::<><>::res://Menu.cs<>uid://c83jx1hw7re42
+MovingCirclePlatform.tscn::PackedScene::732465263667929533::1712592113::0::1::::<><>::uid://ck85j7kgltmrg
+movingPlatform.png::CompressedTexture2D::5544693548061958784::1702473996::1702474028::1::::<><>::
+MovingPlatform.tscn::PackedScene::3950181208417601109::1712739706::0::1::::<><>::uid://ck85j7kgltmrg
+Namnlös.png::CompressedTexture2D::4907294242559460891::1696248737::1696248737::1::::<><>::
+nature-paltformer-tileset-16x16 (1).png::CompressedTexture2D::6083584437684593676::1699035376::1699035416::1::::<><>::
+node_2d.tscn::PackedScene::9199911612516946439::1696854192::0::1::::<><>::uid://dqqa486b3wugk
+PauseMenu.cs::CSharpScript::-1::1711022031::0::1::::<><>::
+PauseMenu.tscn::PackedScene::1739956254165222831::1713866826::0::1::::<><>::res://PauseMenu.cs
+pirate - kopia.png::CompressedTexture2D::6452229649736489309::1700849940::1700852416::1::::<><>::
+pirate.png::CompressedTexture2D::9033422900601472158::1700075599::1700075765::1::::<><>::
+platform.cs::CSharpScript::-1::1696852336::0::1::::<><>::
+platform.tscn::PackedScene::4395931178815766688::1698425947::0::1::::<><>::uid://bi3the6mmybfh
+PlatformEnemy.cs::CSharpScript::-1::1704564045::0::1::::<><>::
+PlatformEnemy.tscn::PackedScene::226355841624923433::1704885187::0::1::::<><>::res://character_body_2d.cs<>uid://dpx6uhp3rqd2n
+Points.cs::CSharpScript::-1::1711541165::0::1::::<><>::
+RedSlimeIdle.png::CompressedTexture2D::1189574543583429877::1705406006::1705406064::1::::<><>::
+Spike.tscn::PackedScene::6741793923358792300::1709813231::0::1::::<><>::uid://b0t2r0etsa48w
+SpikesX5.tscn::PackedScene::7962696274178365544::1709813231::0::1::::<><>::uid://blh3a4cw0e5hx
+tile_map.tscn::PackedScene::4794270818102916959::1713890395::0::1::::<><>::uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>res://Main.cs<>uid://ko2ui3nl74dt::::res://MovingCirclePlatform.tscn<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://b3qco7xay2btr::::res://coin.tscn
+Timer.cs::CSharpScript::-1::1704482270::0::1::::<><>::
+TimerText.cs::CSharpScript::-1::1713890326::0::1::::<><>::
+UI.cs::CSharpScript::-1::1699444769::0::1::::<><>::
+UI.tscn::PackedScene::3465936874795368052::1699445018::0::1::::<><>::res://UI.cs<>res://HP.cs
+::res://audio/::1708372475
+DmgTaken.wav::AudioStreamWAV::6452648228500348130::1707063915::1707065712::1::::<><>::
+jump.wav::AudioStreamWAV::8800002656888463503::1707063867::1707065624::1::::<><>::
+pickupCoin.wav::AudioStreamWAV::4756864680669447897::1707062522::1707062977::1::::<><>::
+PlayerHurt.wav::AudioStreamWAV::4732662382185151593::1707122276::1707122591::1::::<><>::
+SwordSwing.wav::AudioStreamWAV::5036448797179778034::1707215809::1707215855::1::::<><>::
+::res://imgs/::1712826097
+::res://imgs/Background/::1713376803
+AttackSign.jpg::CompressedTexture2D::3162197977667938595::1713202875::1713203021::1::::<><>::
+Clouds.png::CompressedTexture2D::2379182091871204636::1707403810::1707403848::1::::<><>::
+CloudsBackground.png::CompressedTexture2D::2849143314039588733::1707403965::1707403988::1::::<><>::
+ControlsSignRun.png::CompressedTexture2D::1062495726630818964::1711825000::1711825002::1::::<><>::
+FastfallSign.jpg::CompressedTexture2D::4680501242301106539::1713375777::1713376803::1::::<><>::
+GameBackground2.png::CompressedTexture2D::7147464688213405837::1707472306::1707472327::1::::<><>::
+GameBackground.png::CompressedTexture2D::2980046470220827390::1707471874::1707471909::1::::<><>::
+Grassblock from tileset.png::CompressedTexture2D::1133163970498374667::1713114937::1713114965::1::::<><>::
+JumpSign.png::CompressedTexture2D::8423358014901248342::1713202762::1713202764::1::::<><>::
+MovementSign.jpg::CompressedTexture2D::8923946045515433564::1713202928::1713203021::1::::<><>::
+WalljumpSign.png::CompressedTexture2D::4527024820637249194::1713375822::1713376803::1::::<><>::
+Wall_Background.png::CompressedTexture2D::6456491050674699962::1712826175::1712826219::1::::<><>::
+::res://imgs/EnemySprites/::1708372479
+YellowSlimeTileSet.png::CompressedTexture2D::5098797568915247416::1707396567::1707396648::1::::<><>::
+::res://imgs/Obstacles/::1713370188
+Checkpoint-Flag.png::CompressedTexture2D::5649165301500273771::1712936056::1712936152::1::::<><>::
+MagmaBlock.png::CompressedTexture2D::2452105279580317029::1707304065::1707304100::1::::<><>::
+Spike.png::CompressedTexture2D::4182035989422457196::1707246207::1707294750::1::::<><>::
+SpikesX5.png::CompressedTexture2D::3174650211087279597::1707299252::1707299354::1::::<><>::
+UnmarkedCheckpoint-Flag.png::CompressedTexture2D::1736576831397269103::1713370096::1713370188::1::::<><>::
+::res://imgs/Old sprites/::1708372479
+pixil-frame-0 (3).png::CompressedTexture2D::6792990572423123917::1707135537::1707294750::1::::<><>::
+PlayerIdleStance.png::CompressedTexture2D::5200687986201641357::1707134036::1707294750::1::::<><>::
+PlayerRunStance.png::CompressedTexture2D::2022088703596515498::1707134890::1707294750::1::::<><>::
+PlayerTestSpriteSheet.png::CompressedTexture2D::4196533715532429416::1707130453::1707294750::1::::<><>::
+PlayerWalkStance.png::CompressedTexture2D::703521094466727480::1707134538::1707294750::1::::<><>::
+Test2.png::CompressedTexture2D::7310763840445775431::1707131018::1707294750::1::::<><>::
+::res://imgs/PlayerSprites/::1713114565
+pixil-frame-0 (3).png::CompressedTexture2D::3327532751588547066::1707141792::1707141838::1::::<><>::
+PlayerJumpSprite.png::CompressedTexture2D::2806687293822445532::1707139916::1707140516::1::::<><>::
+PlayerJumpSpriteSheet.png::CompressedTexture2D::2368813985665079521::1707142598::1707142638::1::::<><>::
+PlayerStartSprite.png::CompressedTexture2D::2407594759130671196::1707138274::1707140516::1::::<><>::
+PlayerSword1Sprite.png::CompressedTexture2D::4886551245852556958::1707160721::1707161798::1::::<><>::
+PlayerSword2Sprite.png::CompressedTexture2D::2308040958396988864::1707160686::1707161798::1::::<><>::
+PlayerSwordSwingSpriteSheet.png::CompressedTexture2D::5276837848907581322::1707161757::1707161798::1::::<><>::
+PlayerWalkSprite.png::CompressedTexture2D::8769820080335318257::1707140398::1707140516::1::::<><>::
+PlayerWalkSpriteSheet.png::CompressedTexture2D::9006598980932675972::1707141588::1707141627::1::::<><>::
+PlayerWallJumpSprite.png::CompressedTexture2D::6859637205174765895::1707217276::1707217860::1::::<><>::
+PlayerWallJumpSpriteSheet.png::CompressedTexture2D::3793211159416929055::1707217812::1707217860::1::::<><>::
+Sword alt 2.png::CompressedTexture2D::2214174427626805445::1713114373::1713114403::1::::<><>::
+Sword alt 3.png::CompressedTexture2D::1947798010665279841::1713114544::1713114565::1::::<><>::
+Sword.png::CompressedTexture2D::1448295597801396226::1713113821::1713113868::1::::<><>::
+::res://imgs/PlayerSprites/Multiple animations at once/::1708372479
+PlayerWalk&AttackSprite.png::CompressedTexture2D::6707913982310081356::1707314209::1707314544::1::::<><>::
+PlayerWalk&AttackSpriteSheet.png::CompressedTexture2D::5039960747532975352::1707314409::1707314545::1::::<><>::
+::res://Slime Enemy Sprites/::1708372466
+LeftRedSlimeIdle.png::CompressedTexture2D::295623074233179385::1705408470::1707302923::1::::<><>::
+LeftRedSlimeMoving.png::CompressedTexture2D::3225571163536447906::1705408688::1707302923::1::::<><>::
+RedSlimeIdle192x192.png::CompressedTexture2D::4453350002668089718::1705407902::1707302923::1::::<><>::
+RedSlimeMoving192x192.png::CompressedTexture2D::113833090034307378::1705408386::1707302923::1::::<><>::
+RedSlimeTileSet.png::CompressedTexture2D::9004583325408453350::1705492507::1707302923::1::::<><>::
+RedSlimeTileSetFixed.png::CompressedTexture2D::8209331619742036826::1705496962::1707302923::1::::<><>::
+RedSlimeTileSet_Fixed.png::CompressedTexture2D::1070791103018546726::1705497381::1707302923::1::::<><>::

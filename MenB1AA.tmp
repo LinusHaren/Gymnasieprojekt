@@ -1,0 +1,200 @@
+[gd_scene load_steps=10 format=3 uid="uid://bei7wj5oj20r4"]
+
+[ext_resource type="Script" path="res://Menu.cs" id="1_a46k0"]
+[ext_resource type="Texture2D" uid="uid://c83jx1hw7re42" path="res://imgs/Background/GameBackground2.png" id="2_f5smo"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_1irgx"]
+device = -1
+keycode = 80
+unicode = 112
+
+[sub_resource type="Shortcut" id="Shortcut_s1akp"]
+events = [SubResource("InputEventKey_1irgx")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_88g6i"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_rxeky"]
+events = [SubResource("InputEventKey_88g6i")]
+
+[sub_resource type="FontFile" id="FontFile_q6wvi"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/30/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/30/0/glyphs/0/size = Vector2(0, 0)
+cache/0/30/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/30/0/glyphs/0/texture_idx = -1
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/15/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_1l0so"]
+default_font = SubResource("FontFile_q6wvi")
+default_font_size = 20
+
+[sub_resource type="Theme" id="Theme_ivi3x"]
+default_font_size = 70
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_a46k0")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.417
+anchor_right = 0.512
+anchor_bottom = 0.668
+offset_left = -178.848
+offset_top = 23.784
+offset_right = 334.176
+offset_bottom = 154.136
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_s1akp")
+text = "Play
+[P]"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_rxeky")
+text = "Quit
+[Q]"
+
+[node name="GameBackground2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(762, 635.875)
+scale = Vector2(3.47428, 3.12528)
+texture = ExtResource("2_f5smo")
+
+[node name="Copyright claim" type="RichTextLabel" parent="."]
+offset_left = 637.0
+offset_top = 193.0
+offset_right = 1787.0
+offset_bottom = 451.0
+theme = SubResource("Theme_1l0so")
+bbcode_enabled = true
+text = "[color=red]
+Harén Productions © 2024[/color]"
+
+[node name="Title" type="RichTextLabel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 105.0
+offset_bottom = 277.0
+grow_horizontal = 2
+theme = SubResource("Theme_ivi3x")
+bbcode_enabled = true
+text = "[center][color=Yellow] GAME TITLE SCREEN
+[/color][/center]"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(570, 320)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="OnPlayPressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="OnQuitPressed"]
