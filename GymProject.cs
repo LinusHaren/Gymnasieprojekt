@@ -122,8 +122,7 @@ public partial class GymProject : CharacterBody2D
 
 
 			float Yknockback = 140f;
-			// Currently at 0, concidering it needs a check for what direction a player is aproaching an
-			// obstacle.
+			
 			float Xknockback = 0f;
 
 			//Updates the player's position (moves it a bit above the current position)
@@ -153,7 +152,6 @@ public partial class GymProject : CharacterBody2D
 		if (StartIFramesTimer == true)
 		{
 			//Problem...uneven ammount of time for Iframes
-			//Could be made as a feature instead
 			GD.Print("Player was invincible");
 			StartIFramesTimer = false;
 			
@@ -327,7 +325,6 @@ public partial class GymProject : CharacterBody2D
 
 	public void GameOverTimer()
 	{
-		//Tillfälligt, du har DeathScreen för detta, ta bort denna
 		var tree = GetTree();
 		tree.ReloadCurrentScene();
 	}
@@ -407,7 +404,6 @@ public partial class GymProject : CharacterBody2D
 		var attackReveal = GetNode<CollisionShape2D>("AnimatedSprite2D/Area2D/atkHitBoxCheck"); 
 
 
-		//spriteFlip = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 		
 		
@@ -487,7 +483,6 @@ public partial class GymProject : CharacterBody2D
 			else if (Input.IsActionPressed("Right") & Input.IsActionPressed("attack"))
 			{
 
-				//Ta bort animationPlayer
 
 				if (attackCooldownState == true)
 				{
@@ -700,17 +695,7 @@ public partial class GymProject : CharacterBody2D
 		
 
 		
-		/*
-		if (velocity.X < 0)// left
-		{
-			spriteFlip.Scale = new Vector2(-1,1);
-			
-		}
-		else // right
-		{
-			spriteFlip.Scale = new Vector2(1,1);
-		}
-		*/
+		
 		
 		
 		//Start of wallsliding + walljump
@@ -796,8 +781,7 @@ public partial class GymProject : CharacterBody2D
 					velocity.Y += (wallSlideGravity * (float)delta);
 
 					velocity.Y = Mathf.Clamp(velocity.Y, -wallSlideSpeed, wallSlideSpeed);
-					//Returns the velocity.Y variable if its inbetween -wallSlideSpeed and wallSlideSpeed
-					//																(-100 och 100)
+				
 				}
 			}
 		}

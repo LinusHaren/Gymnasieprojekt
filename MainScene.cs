@@ -311,7 +311,6 @@ public partial class MainScene : Node
 		{
 			PlayerRespawnLvl1();
 
-			//Current problem, HP Stays at 0 when pressing Retry in GameOverOptions in both levels
 		}
 	}
 
