@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714038786
+::res://::1714135556
 Area2D.cs::CSharpScript::-1::1698060294::0::1::::<><>::
 BetaChar.cs::CSharpScript::-1::1696500372::0::1::::<><>::
 betaEnemy.png::CompressedTexture2D::8261493728778082175::1697709291::1700047785::1::::<><>::
 cancelWallJump.tscn::PackedScene::4507665719023621858::1713203435::0::1::::<><>::
 character_body_2d.cs::CSharpScript::-1::1709233425::0::1::::<><>::
-character_body_2d.tscn::PackedScene::5845155128190798878::1713866826::0::1::::<><>::res://character_body_2d.cs<>uid://b4pia2voiwudq
-Checkpoint.tscn::PackedScene::3506309412959203973::1713866826::0::1::::<><>::uid://cmqq6r2gntg8j
+character_body_2d.tscn::PackedScene::5845155128190798878::1714135327::0::1::::<><>::res://character_body_2d.cs<>uid://b4pia2voiwudq::::res://Slime Enemy Sprites/RedSlimeIdle192x192.png<>uid://pix1ju4mnlfi::::res://Slime Enemy Sprites/RedSlimeTileSet_Fixed.png
+Checkpoint.tscn::PackedScene::3506309412959203973::1714135328::0::1::::<><>::uid://cmqq6r2gntg8j::::res://imgs/Obstacles/Checkpoint-Flag.png<>uid://y0hfwx27j1a6::::res://imgs/Obstacles/UnmarkedCheckpoint-Flag.png
 circle.png::CompressedTexture2D::948374311991328655::1702474441::1702474448::1::::<><>::
 CircleRotationPlatform.cs::CSharpScript::-1::1703071739::0::1::::<><>::
 CircleRotationPlatform.tscn::PackedScene::7613598932502432325::1711740749::0::1::::<><>::uid://ck85j7kgltmrg
@@ -23,25 +23,25 @@ FinalScoreScreen.cs::CSharpScript::-1::1710419008::0::1::::<><>::
 FollowingSlime.cs::CSharpScript::-1::1707473307::0::1::::<><>::
 FollowingSlime.tscn::PackedScene::2472085535106616438::1707999057::0::1::::<><>::res://FollowingSlime.cs<>uid://cev5plm0o0kce
 GameOverOptions.cs::CSharpScript::-1::1711540050::0::1::::<><>::
-GameOverOptions.tscn::PackedScene::1792882422282114776::1713866826::0::1::::<><>::res://GameOverOptions.cs<>res://DeathScreen.cs
+GameOverOptions.tscn::PackedScene::1792882422282114776::1714135327::0::1::::<><>::res://GameOverOptions.cs<>res://DeathScreen.cs
 grass.png::CompressedTexture2D::7319500353967309676::1696437675::1700047785::1::::<><>::
 grassland.cs::CSharpScript::-1::1696500082::0::1::::<><>::
 grassland.tscn::PackedScene::5613721837540680750::1698425946::0::1::::<><>::uid://bi3the6mmybfh
-GymProject.cs::CSharpScript::-1::1713890326::0::1::::<><>::
-GymProject.tscn::PackedScene::8315367162619252214::1713866824::0::1::::<><>::res://GymProject.cs<>uid://cd2nogih13aeq
+GymProject.cs::CSharpScript::-1::1714134011::0::1::::<><>::
+GymProject.tscn::PackedScene::8315367162619252214::1714135325::0::1::::<><>::res://GymProject.cs<>uid://cd2nogih13aeq::::res://imgs/PlayerSprites/Multiple animations at once/PlayerWalk&AttackSpriteSheet.png<>uid://cb6eoiuv2nlyh::::res://Namnlös.png<>res://UI.cs<>res://HP.cs<>uid://chge0pf0bprgs::::res://imgs/PlayerSprites/PlayerSwordSwingSpriteSheet.png<>uid://bakiy7oludtn5::::res://imgs/PlayerSprites/PlayerStartSprite.png<>uid://80qaxoevdnf2::::res://imgs/PlayerSprites/PlayerJumpSpriteSheet.png<>uid://bnn48i4sd5dnu::::res://imgs/PlayerSprites/pixil-frame-0 (3).png<>uid://c4y4htjv4vlb8::::res://imgs/PlayerSprites/PlayerWallJumpSprite.png<>res://Points.cs<>res://TimerText.cs<>res://Timer.cs<>res://DeathScreen.cs<>uid://b81i4pphhqau8::::res://audio/pickupCoin.wav<>uid://cx6yf5wm2dctm::::res://audio/DmgTaken.wav<>uid://dxm101k5f67ah::::res://audio/jump.wav<>uid://b8osi1h2ixuq8::::res://audio/PlayerHurt.wav<>res://FinalScoreScreen.cs<>uid://y133cbn3m82v::::res://PauseMenu.tscn<>uid://0sqrnma2hsua::::res://GameOverOptions.tscn<>uid://cd0xttxn861is::::res://audio/SwordSwing.wav
 HP.cs::CSharpScript::-1::1711022324::0::1::::<><>::
 icon.svg::CompressedTexture2D::7738604186805820947::1695810137::1695810150::1::::<><>::
 InvisibleWall.tscn::PackedScene::1207643054145835916::1711821528::0::1::::<><>::
-Level1.tscn::PackedScene::3851495486424859363::1713866825::0::1::::<><>::uid://csw60nm2y2oa3
-Level2.tscn::PackedScene::9209915802114762495::1713866826::0::1::::<><>::uid://csw60nm2y2oa3
+Level1.tscn::PackedScene::3851495486424859363::1714135556::0::1::::<><>::uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>uid://b5q6o4vfb6k2e::::res://imgs/Background/WalljumpSign.png<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://b5hsui0437tss::::res://cancelWallJump.tscn<>uid://dlpgpdtvv25dc::::res://SpikesX5.tscn<>uid://b3qco7xay2btr::::res://coin.tscn<>uid://cpjo36ywpslm1::::res://character_body_2d.tscn<>uid://dsalqgckw0f71::::res://imgs/Background/JumpSign.png<>uid://bp7qny0d723xp::::res://Checkpoint.tscn<>uid://blb166eijv4hj::::res://imgs/Background/AttackSign.jpg<>uid://b7xjf3n1tfcal::::res://imgs/Background/FastfallSign.jpg
+Level2.tscn::PackedScene::9209915802114762495::1714135478::0::1::::<><>::uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>uid://b3qco7xay2btr::::res://coin.tscn<>uid://ko2ui3nl74dt::::res://MovingCirclePlatform.tscn<>uid://b5hsui0437tss::::res://cancelWallJump.tscn<>uid://pexfcxouxk1a::::res://imgs/Background/ControlsSignRun.png<>uid://cpjo36ywpslm1::::res://character_body_2d.tscn<>uid://c3b1mjh721pwe::::res://Spike.tscn<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://bp7qny0d723xp::::res://Checkpoint.tscn<>uid://dlpgpdtvv25dc::::res://SpikesX5.tscn
 LevelBase.tscn::PackedScene::1937390678402344343::1696608596::0::1::::<><>::res://MainLevelBase.cs<>res://BetaChar.cs<>res://GymProject.cs<>res://LevelGround.cs<>uid://dqqa486b3wugk
 MagmaBlock.tscn::PackedScene::6840320326715553518::1709813231::0::1::::<><>::uid://ba622y7gdl7p6
 Main.cs::CSharpScript::-1::1709726345::0::1::::<><>::
 MainLevelBase.cs::CSharpScript::-1::1696500281::0::1::::<><>::
-MainScene.cs::CSharpScript::-1::1713550922::0::1::::<><>::
-MainScene.tscn::PackedScene::7220212740799728870::1713890483::0::1::::<><>::res://MainScene.cs<>uid://c83jx1hw7re42::::res://imgs/Background/GameBackground2.png<>uid://bu4xtks0hirnv::::res://Level1.tscn<>uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://d4hl75vrlfqah::::res://Level2.tscn
+MainScene.cs::CSharpScript::-1::1714120409::0::1::::<><>::
+MainScene.tscn::PackedScene::7220212740799728870::1714135511::0::1::::<><>::res://MainScene.cs<>uid://c83jx1hw7re42::::res://imgs/Background/GameBackground2.png<>uid://bu4xtks0hirnv::::res://Level1.tscn<>uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://d4hl75vrlfqah::::res://Level2.tscn
 Menu.cs::CSharpScript::-1::1709808625::0::1::::<><>::
-Menu.tscn::PackedScene::2685673831215640811::1713866826::0::1::::<><>::res://Menu.cs<>uid://c83jx1hw7re42
+Menu.tscn::PackedScene::2685673831215640811::1714135327::0::1::::<><>::res://Menu.cs<>uid://c83jx1hw7re42::::res://imgs/Background/GameBackground2.png<>uid://20r7iwc6djsr::::res://imgs/PlayerSprites/Sword alt 3.png<>uid://qe6bscejg6j4::::res://imgs/Background/Grassblock from tileset.png
 MovingCirclePlatform.tscn::PackedScene::732465263667929533::1712592113::0::1::::<><>::uid://ck85j7kgltmrg
 movingPlatform.png::CompressedTexture2D::5544693548061958784::1702473996::1702474028::1::::<><>::
 MovingPlatform.tscn::PackedScene::3950181208417601109::1712739706::0::1::::<><>::uid://ck85j7kgltmrg
@@ -49,7 +49,7 @@ Namnlös.png::CompressedTexture2D::4907294242559460891::1696248737::1696248737::
 nature-paltformer-tileset-16x16 (1).png::CompressedTexture2D::6083584437684593676::1699035376::1699035416::1::::<><>::
 node_2d.tscn::PackedScene::9199911612516946439::1696854192::0::1::::<><>::uid://dqqa486b3wugk
 PauseMenu.cs::CSharpScript::-1::1711022031::0::1::::<><>::
-PauseMenu.tscn::PackedScene::1739956254165222831::1713866826::0::1::::<><>::res://PauseMenu.cs
+PauseMenu.tscn::PackedScene::1739956254165222831::1714135328::0::1::::<><>::res://PauseMenu.cs
 pirate - kopia.png::CompressedTexture2D::6452229649736489309::1700849940::1700852416::1::::<><>::
 pirate.png::CompressedTexture2D::9033422900601472158::1700075599::1700075765::1::::<><>::
 platform.cs::CSharpScript::-1::1696852336::0::1::::<><>::
@@ -60,9 +60,9 @@ Points.cs::CSharpScript::-1::1711541165::0::1::::<><>::
 RedSlimeIdle.png::CompressedTexture2D::1189574543583429877::1705406006::1705406064::1::::<><>::
 Spike.tscn::PackedScene::6741793923358792300::1709813231::0::1::::<><>::uid://b0t2r0etsa48w
 SpikesX5.tscn::PackedScene::7962696274178365544::1709813231::0::1::::<><>::uid://blh3a4cw0e5hx
-tile_map.tscn::PackedScene::4794270818102916959::1713890395::0::1::::<><>::uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>res://Main.cs<>uid://ko2ui3nl74dt::::res://MovingCirclePlatform.tscn<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://b3qco7xay2btr::::res://coin.tscn
+tile_map.tscn::PackedScene::4794270818102916959::1714135326::0::1::::<><>::uid://dqqa486b3wugk::::res://GymProject.tscn<>uid://csw60nm2y2oa3::::res://nature-paltformer-tileset-16x16 (1).png<>res://Main.cs<>uid://ko2ui3nl74dt::::res://MovingCirclePlatform.tscn<>uid://bwjq536opymhh::::res://MovingPlatform.tscn<>uid://b3qco7xay2btr::::res://coin.tscn
 Timer.cs::CSharpScript::-1::1704482270::0::1::::<><>::
-TimerText.cs::CSharpScript::-1::1713890326::0::1::::<><>::
+TimerText.cs::CSharpScript::-1::1714134011::0::1::::<><>::
 UI.cs::CSharpScript::-1::1699444769::0::1::::<><>::
 UI.tscn::PackedScene::3465936874795368052::1699445018::0::1::::<><>::res://UI.cs<>res://HP.cs
 ::res://audio/::1708372475
@@ -72,16 +72,17 @@ pickupCoin.wav::AudioStreamWAV::4756864680669447897::1707062522::1707062977::1::
 PlayerHurt.wav::AudioStreamWAV::4732662382185151593::1707122276::1707122591::1::::<><>::
 SwordSwing.wav::AudioStreamWAV::5036448797179778034::1707215809::1707215855::1::::<><>::
 ::res://imgs/::1712826097
-::res://imgs/Background/::1713376803
+::res://imgs/Background/::1714136547
 AttackSign.jpg::CompressedTexture2D::3162197977667938595::1713202875::1713203021::1::::<><>::
 Clouds.png::CompressedTexture2D::2379182091871204636::1707403810::1707403848::1::::<><>::
 CloudsBackground.png::CompressedTexture2D::2849143314039588733::1707403965::1707403988::1::::<><>::
 ControlsSignRun.png::CompressedTexture2D::1062495726630818964::1711825000::1711825002::1::::<><>::
-FastfallSign.jpg::CompressedTexture2D::4680501242301106539::1713375777::1713376803::1::::<><>::
+FastfallSign.jpg::CompressedTexture2D::4680501242301106539::1714134373::1714134375::1::::<><>::
 GameBackground2.png::CompressedTexture2D::7147464688213405837::1707472306::1707472327::1::::<><>::
 GameBackground.png::CompressedTexture2D::2980046470220827390::1707471874::1707471909::1::::<><>::
 Grassblock from tileset.png::CompressedTexture2D::1133163970498374667::1713114937::1713114965::1::::<><>::
 JumpSign.png::CompressedTexture2D::8423358014901248342::1713202762::1713202764::1::::<><>::
+MenuSign.png::CompressedTexture2D::9083021810398069823::1714136547::1714136552::1::::<><>::
 MovementSign.jpg::CompressedTexture2D::8923946045515433564::1713202928::1713203021::1::::<><>::
 WalljumpSign.png::CompressedTexture2D::4527024820637249194::1713375822::1713376803::1::::<><>::
 Wall_Background.png::CompressedTexture2D::6456491050674699962::1712826175::1712826219::1::::<><>::

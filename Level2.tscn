@@ -400,9 +400,6 @@ position = Vector2(7473, -938)
 [node name="Coin19" parent="Coins" instance=ExtResource("2_xsnei")]
 position = Vector2(7651, -938)
 
-[node name="Coin20" parent="Coins" instance=ExtResource("2_xsnei")]
-position = Vector2(9475, -835)
-
 [node name="Coin21" parent="Coins" instance=ExtResource("2_xsnei")]
 position = Vector2(7464, -67)
 

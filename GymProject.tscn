@@ -592,6 +592,9 @@ position = Vector2(-21.75, -24.75)
 scale = Vector2(0.155142, 0.17345)
 texture = ExtResource("2_mmt3d")
 
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+volume_db = -28.0
+
 [connection signal="Death" from="." to="UI/DeathScreen" method="OnPlayerDeath"]
 [connection signal="LoseHP" from="." to="UI/HP" method="PlayerHit"]
 [connection signal="LoseHP" from="." to="UI/GameOverOptions" method="PlayerHit"]
