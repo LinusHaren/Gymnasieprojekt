@@ -1,9 +1,8 @@
-res://Level1.tscn
+res://GymProject.tscn
 res://GymProject.cs
 res://TimerText.cs
-res://GymProject.tscn
 res://MainScene.tscn
-res://tile_map.tscn
+res://Level1.tscn
 res://Level2.tscn
 res://character_body_2d.tscn
 res://GameOverOptions.tscn
