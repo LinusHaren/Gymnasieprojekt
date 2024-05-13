@@ -76,7 +76,7 @@ shape = SubResource("RectangleShape2D_tapaq")
 debug_color = Color(0.972549, 0.0588235, 0, 0)
 
 [node name="WallCheck" type="RayCast2D" parent="."]
-position = Vector2(128, 32)
+position = Vector2(128, -1)
 target_position = Vector2(-96, -1)
 
 [node name="WallCheckRight" type="RayCast2D" parent="."]
